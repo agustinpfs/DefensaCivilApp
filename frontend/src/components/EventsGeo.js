@@ -33,12 +33,12 @@ export default class EventsGeo extends Component {
                     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
                         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
                         crossorigin=""></script>
-                    <script src="eventsScript.js"></script>
+                    <script src="eventScript.js"></script>
 
                 </Helmet>
                 <div className="row">
-                    {<script src="eventsScript.js"></script>}
-                    {console.log(this.state.eventosLista)}
+                    {/* {<script src="eventScript.js"></script>} */}
+                    {/* {console.log(this.state.eventosLista)} */}
                     {/* {console.log(testeo)} */}
                     <div id="mapid" className="clase">
                     </div>
@@ -50,7 +50,7 @@ export default class EventsGeo extends Component {
                     </div>
 
                     <input
-                        id='verse'
+                        id='events'
                         className="form-control"
                         value={JSON.stringify(this.state.eventosLista)}
                         type="text"
