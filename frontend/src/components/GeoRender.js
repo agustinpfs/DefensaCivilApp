@@ -70,7 +70,7 @@ export default class GeoRender extends Component {
                         />
                     </div>
                     <button type="submit" className="btn btn-primary">
-                        Save
+                        Finalizar evento
                     </button>
 
                 </form>
