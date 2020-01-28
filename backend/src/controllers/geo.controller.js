@@ -20,6 +20,7 @@ geoCtrl.createGeo = async (req, res) => {
     const typeNested = allObject.features
     
     const newGeo = new Geo({
+            'name': 'pepe',
             'features': typeNested
         });
     await newGeo.save();

@@ -7,6 +7,7 @@ const Schema = mongoose.Schema;
 
 
 const geoSchema = new Schema({
+  name: String,
   features: [{}]
 })
 
