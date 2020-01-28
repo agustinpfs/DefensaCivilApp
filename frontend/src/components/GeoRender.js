@@ -15,7 +15,7 @@ export default class GeoRender extends Component {
     // getGeo = async () => {
     //     const res = await axios.get('http://localhost:4000/api/geo');
     //     this.setState({
-    //         users: res.data
+    //         all: res.data
     //     });
     // }
 
