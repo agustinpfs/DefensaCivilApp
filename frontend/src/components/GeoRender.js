@@ -5,7 +5,8 @@ import { Helmet } from "react-helmet";
 
 export default class GeoRender extends Component {
     state = {
-        all: ''
+        all: '',
+        description: ''
     }
 
     // componentDidMount() {
@@ -23,17 +24,20 @@ export default class GeoRender extends Component {
         e.preventDefault(); //cancel reset
 
         const valor = document.getElementById('demo').value;
+        const valor2 = document.getElementById('demo2').value;
 
         this.setState({
             all: valor,
+            description: valor2,
         })
     }
 
     onSubmit = async (e) => {
         e.preventDefault(); //cancel reset
-
+     
         await axios.post('http://localhost:4000/api/geo', {
             all: this.state.all,
+            description: this.state.description
         });
     }
 
@@ -67,6 +71,13 @@ export default class GeoRender extends Component {
                         <input
                             type="hidden"
                             id="demo"
+                        />
+                    </div>
+                    <div className="">
+                        <input 
+                            // type="text" 
+                            id ="demo2" 
+                            placeholder="Descripción del evento"
                         />
                     </div>
                     <button type="submit" className="btn btn-primary">
