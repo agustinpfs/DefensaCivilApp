@@ -14,7 +14,7 @@ const geoSchema = new Schema({
       },
     geometry: {
       type: { $type: String },
-      coordinates: [Number]
+      coordinates: [[[Number]]]
     }
   }],
   // Single subdocument
@@ -26,24 +26,24 @@ const geoSchema = new Schema({
 
 
 
-const geoSchema = new Schema({
-  description: String,
-  type: String,
-  // Array of subdocuments
-  features: 
-          [{
-              type: String,
-              properties: {
-                          desc = Object,
-                          image = Object
-                          },
-              geometry: {
-                          type: String,
-                          coordinates: [Number]
-              }
+// const geoSchema = new Schema({
+//   description: String,
+//   type: String,
+//   // Array of subdocuments
+//   features: 
+//           [{
+//               type: String,
+//               properties: {
+//                           desc = Object,
+//                           image = Object
+//                           },
+//               geometry: {
+//                           type: String,
+//                           coordinates: [Number]
+//               }
               
-          }],
-})
+//           }],
+// })
 
 
 
