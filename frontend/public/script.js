@@ -48,3 +48,22 @@ console.log(togeo);
 
 });
 
+
+const cc = document.getElementById("events")
+console.log(cc.value)
+const ot = cc.value
+const sec = ot.slice(1,-1);
+console.log(sec);
+
+console.log('cc')
+document.getElementById("conver").addEventListener("click", function () {
+    function eventos() {
+        const sendlista =  JSON.parse(sec);
+        
+        // console.log(sec)
+        L.geoJson([sendlista]).addTo(map);
+    }
+    eventos()
+    
+    });
+

@@ -6,9 +6,20 @@ import { Helmet } from "react-helmet";
 export default class GeoRender extends Component {
     state = {
         all: '',
-        description: ''
+        description: '',
+        testEntidad:[]
     }
 
+    async componentDidMount() {
+        this.getGeo();
+    }
+
+    getGeo = async () => {
+        const res = await axios.get('http://localhost:4000/api/geo')
+        this.setState({
+            eventosLista: res.data
+        });
+    }
     // componentDidMount() {
     //     this.getGeo();
     // }
@@ -85,6 +96,19 @@ export default class GeoRender extends Component {
                     </button>
 
                 </form>
+
+                <div>
+                        <button type='submit' id="conver"> {/*//lo mete en el form */}
+                            {/* <button id="convert"> */}
+                            testEntidad
+                    </button>
+                     <input
+                        id='events'
+                        className="form-control"
+                        value={JSON.stringify(this.state.eventosLista)}
+                        type="text"
+                    />
+            </div>
             </div>
         )
     }
