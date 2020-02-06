@@ -94,7 +94,30 @@ console.log('cc')
 
 // window.onload = eventos();
 
+document.getElementById("fer").addEventListener("click",  function () {
+    function na() {
+        var evt = new Event('click');
+        var button = document.getElementById('convert');
+        // This is where the magic happens
+        button.dispatchEvent(evt);
+    }
+
+    setTimeout (function name() {
+    var ev = new Event('click');
+var butto = document.getElementById('convert');
+// This is where the magic happens
+butto.dispatchEvent(ev);
+}, 300)
+
+
+
+na()
+name()
+    
+})
+
 document.getElementById("convert").addEventListener("click",  function () {
+   
     console.log(sec)
     console.log(ot)
     console.log(cc.value)
@@ -115,5 +138,6 @@ document.getElementById("convert").addEventListener("click",  function () {
     }
 
     eventos()
+    
     
     });
