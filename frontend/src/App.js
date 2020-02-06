@@ -7,7 +7,7 @@ import './App.css';
 import Navigation from './components/Navigation'
 import GeoRender from './components/GeoRender'
 import EventsGeo from './components/EventsGeo'
-import ListEvents from './components/ListEvents'
+// import ListEvents from './components/ListEvents'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <div className="container p-4">
         <Route path="/geo" component={GeoRender} />
         <Route path="/geoevents" component={EventsGeo} />
-        <Route path="/ListEvents" component={ListEvents} />
+        {/* <Route path="/ListEvents" component={ListEvents} /> */}
         {/* <Route path="/geo2" exact component={GeoRender} /> */}
       </div>
       

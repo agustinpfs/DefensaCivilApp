@@ -8,7 +8,7 @@ export default class EventsGeo extends Component {
 
     state = {
         eventosLista: [],
-        descSelected: 'Despliegue para buscar evento',
+        descSelected: '',
         descriptions: [],
         currentevent: []
     }
@@ -26,7 +26,7 @@ export default class EventsGeo extends Component {
                 descSelected: res.data[0].description
             })
         }
-        
+
     }
 
     getGeo = async () => {
@@ -35,30 +35,10 @@ export default class EventsGeo extends Component {
             eventosLista: res.data
         });
     }
-
-    onSubmit = async (e) => {
-        e.preventDefault();
-        // window.location.reload(true);
-
-        console.log(this.state.descSelected)
-    }
-
-    onInputChange = (e) => {
-        // e.onClick.target.value = this.currentEvent()
-        this.setState({
-            descSelected: e.target.value   //input info - e.target.name->depending on the name use a data
-            
-        })
-        // const es = e.target.value
-        // es.onClick = currentEvent()
-        console.log(this.state.descSelected)
-    }
-
-
     currentEvent = () => {
         // window.location.reload(true);
-        
-        
+
+
         const eventos = this.state.descriptions
         const eventoDesc = this.state.descSelected
         // const currev = this.state.currentevent
@@ -70,17 +50,39 @@ export default class EventsGeo extends Component {
                 });
             }
         }
-    //    function  showHide () {
-    //         document.getElementById("opciones").style.display = "none";
-    //         document.getElementById("mapid").style.width = "400px";
-    //         document.getElementById("mapid").style.height = "400px";
-    //         // document.getElementById("mapa").style.display = "block";
+        //    function  showHide () {
+        //         document.getElementById("opciones").style.display = "none";
+        //         document.getElementById("mapid").style.width = "400px";
+        //         document.getElementById("mapid").style.height = "400px";
+        //         // document.getElementById("mapa").style.display = "block";
 
-    //    }
-    //       showHide()
+        //    }
+        //       showHide()
     }
 
-   
+    onSubmit = async (e) => {
+        e.preventDefault();
+        // window.location.reload(true);
+        this.currentEvent()
+
+        console.log(this.state.descSelected)
+
+    }
+
+    onInputChange = (e) => {
+        // e.onClick.target.value = this.currentEvent()
+        this.setState({
+            descSelected: e.target.value   //input info - e.target.name->depending on the name use a data
+
+        })
+        // const es = e.target.value
+        // es.onClick = currentEvent()
+        console.log(this.state.descSelected)
+    }
+
+
+
+
 
 
 
@@ -106,38 +108,42 @@ export default class EventsGeo extends Component {
                     {/* <div id="mapa" style={{width: "0 px"}}> */}
                     {/* <div id="mapid" className="clase" style={{position:"relative", width: "0px", height: '0px'}}> */}
                     <div id="mapid" className="clase">
-                    {/* </div> */}
+                        {/* </div> */}
                     </div>
-                    
+
                     <div>
                         {/* <button id="conv" >hhhhhhhhhh</button> */}
                         {/* <button id="co" >vuelva a aparecer</button> */}
                         {/* <button onClick={this.currentEvent}>curr</button> */}
 
-                      {/* <button onLoad={this.currentEvent}>curr</button> */}
-                     
+                        {/* <button onLoad={this.currentEvent}>curr</button> */}
+
                     </div>
                     <form id="opciones" onSubmit={this.onSubmit}>
                         {/* SELECT THE USER */}
                         <div className="form-group">
+
+
                             <select
-                                id="convert"
+                                // id="convert"
                                 className="form-control"
                                 value={this.state.descSelected}
                                 onChange={this.onInputChange}
                                 name="descSelected"
-                                onClick= {this.currentEvent}
-                                // placeholder="Type or select a stock here..."
-                                // isDisabled={this.props.disabled}
-                                // onClick= {this.showHide}
-                                required>
+                            // onClick= {this.currentEvent}
+                            // placeholder="Type or select a stock here..."
+                            // isDisabled={this.props.disabled}
+                            // onClick= {this.showHide}
+                            // required
+                            >
                                 {/* {
                                     this.state.descriptions.map(desc => (
                                         <option key={desc} value={desc}>
                                             {desc}
                                         </option>
                                     ))
-                                } */}
+                                }
+                                </select> */}
                                 {
                                     this.state.descriptions.map(desc => (
                                         <option key={desc.id}>
@@ -147,28 +153,31 @@ export default class EventsGeo extends Component {
                                 }
                             </select>
                         </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <input
                             id='events'
                             className="form-control"
                             value={JSON.stringify(this.state.currentevent)}
                             type="text"
                         />
-                        {/* <button type='submit' id="convert"> 
+                        <button id="convert" type='submit'>
                             showEvento
+                    </button>
+                        {/* <button type='submit'>
+                            submit
                     </button> */}
                         {/* <Link to={"/ListEvents"} id = 'convert'>
                         showEvento
                                     </Link> */}
                     </form>
                     <p>
-                        {this.state.descSelected}
-                        {/* {JSON.stringify(this.state.currentevent)+ "AAAAAAAAAA"} */}
-                        {JSON.stringify(this.state.descriptions)}
+                        {/* {this.state.descSelected} */}
+                        {JSON.stringify(this.state.currentevent) + "AAAAAAAAAA"}
+                        {/* {JSON.stringify(this.state.descriptions)} */}
                     </p>
                 </div>
             </div >
