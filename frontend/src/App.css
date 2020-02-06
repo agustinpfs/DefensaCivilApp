@@ -1,4 +1,14 @@
 .clase {
     width: 700px; 
-    height: 400px
-  }
+    height: 400px;
+    /* display: none; */
+    /* position: absolute; */
+  };
+
+/* #mapa{
+
+  display: none !important;
+} */
+
+
+
