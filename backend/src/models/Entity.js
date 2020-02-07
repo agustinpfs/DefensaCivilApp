@@ -1,53 +1,30 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const geoSchema = new Schema({
-  entityType: { $type: String },
-  type: { $type: String },  
+const entitySchema = new Schema({
+  type: { $type: String, default: "FeatureCollection" },
 
   // Array of subdocuments
   features: [{
-    type: String,
+    type: { $type: String, default: "Feature" },
     properties: {
+        tipoEntidad: { $type: String },
         nombre: { $type: String },
         direccion: { $type: String },
         telefono: { $type: String },
         email: { $type: String },
         sector: { $type: String },
-        direccion: { $type: String }
-      },
+        direccion: { $type: String },
+        riesgo: [String]
+    },
     geometry: {
-      type: { $type: String },
-      coordinates: [[[Number]]]
+        type: { $type: String },
+        coordinates: [[[Number]]]
     }
   }],
   // Single subdocument
- 
-},{typeKey: '$type'})
 
-
-
-
-
-
-// const geoSchema = new Schema({
-//   description: String,
-//   type: String,
-//   // Array of subdocuments
-//   features: 
-//           [{
-//               type: String,
-//               properties: {
-//                           desc = Object,
-//                           image = Object
-//                           },
-//               geometry: {
-//                           type: String,
-//                           coordinates: [Number]
-//               }
-              
-//           }],
-// })
+}, { typeKey: '$type' })
 
 
 
@@ -55,4 +32,8 @@ const geoSchema = new Schema({
 
 
 
-module.exports = mongoose.model('Geo', geoSchema);
+
+
+
+
+module.exports = mongoose.model('Entity', entitySchema);
