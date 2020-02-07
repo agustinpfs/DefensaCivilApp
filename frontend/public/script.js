@@ -31,6 +31,34 @@ drawnItems.addLayer(layer);
 });
 
 
+map.on('click', onMapClick);
+
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    var newMarker = new L.marker(e.latlng).addTo(map);
+    newMarker.bindPopup(e.latlng.toString()).openPopup()
+    var lat = e.latlng.lat;
+    var lng = e.latlng.lng;
+
+
+
+
+}
+
+map.on('click', onMapClick);
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties.nombre) {
+        layer.bindPopup(feature.properties.nombre);
+    }
+}
+
+
+
 document.getElementById("convert").addEventListener("click", function () {
 togeo = JSON.stringify(drawnItems.toGeoJSON(), null, 2);
 console.log(togeo);
@@ -58,10 +86,12 @@ console.log(sec);
 console.log('cc')
 document.getElementById("conver").addEventListener("click", function () {
     function eventos() {
-        const sendlista =  JSON.parse(sec);
+        const sendlista =  JSON.parse(ot);
         
         // console.log(sec)
-        L.geoJson([sendlista]).addTo(map);
+        // L.geoJson([sendlista]).addTo(map);
+        L.geoJson([sendlista], { onEachFeature: onEachFeature }).addTo(map);
+
     }
     eventos()
     

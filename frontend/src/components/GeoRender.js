@@ -7,9 +7,99 @@ export default class GeoRender extends Component {
     state = {
         all: '',
         description: '',
-        eventosLista:[{"_id":"5e3c6ba9e6957bb61620d7af","description":"incendio en el parquee","features":[{"properties":{"desc":null,"image":null},"geometry":{"coordinates":[[[-60.95189094543456]],[[-34.58608959822379]]],"type":"Point"},"_id":"5e3c6ba9e6957bb61620d7b0","type":"Feature"}],"__v":0}]
+        // eventosLista:[{"_id":"5e3c6ba9e6957bb61620d7af","description":"incendio en el parquee","features":[{"properties":{"desc":null,"image":null},"geometry":{"coordinates":[[[-60.95189094543456]],[[-34.58608959822379]]],"type":"Point"},"_id":"5e3c6ba9e6957bb61620d7b0","type":"Feature"}],"__v":0}]
+        eventosLista:{
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "id": "primaria.2",
+                    "geometry": {
+                        "type": "MultiPoint",
+                        "coordinates": [
+                            [
+                                -60.95189094543456,
+                                -34.58608959822379
+                            ]
+                        ]
+                    },
+                    "geometry_name": "geom",
+                    "properties": {
+                        "clave": "4081PP0461",
+                        "cue_anexo": "60532200",
+                        "nombre": "COLEGIO SAN JOSE",
+                        "nro": "461",
+                        "direccion": "CHAMPAGNAT 1375",
+                        "calles_ale": "E/M.DE ROSAS Y R.DE JANEIRO",
+                        "telefono": "0247742-2488",
+                        "cp": "2700",
+                        "email": "egb@sanjosepergamino.com.ar",
+                        "sector": "Privada"
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "id": "primaria.3",
+                    "geometry": {
+                        "type": "MultiPoint",
+                        "coordinates": [
+                            [
+                                -60.95858573913574,
+                                -34.5946746110185
+                            ]
+                        ]
+                    },
+                    "geometry_name": "geom",
+                    "properties": {
+                        "clave": "4081PP3131",
+                        "cue_anexo": "61098800",
+                        "nombre": "COLEGIO SAN PABLO",
+                        "nro": "3131",
+                        "direccion": "GUALBERTO ALVAREZ 401",
+                        "calles_ale": null,
+                        "telefono": "0247743-7254",
+                        "cp": "2700",
+                        "email": "sanpablosecretaria@gmail.com",
+                        "sector": "Privada"
+                    }
+        },]
+            }
+    //     eventosLista:[{
+    //         "_id": "5e3c6ba9e6957bb61620d7af",
+    //         "entityType": "Educación",
+    //         "features": [
+    //             {
+    //                 "properties": {
+    //                     "nombre": "COLEGIO SAN JOSE",
+    //                     "nro": "461",
+    //                     "direccion": "CHAMPAGNAT 1375",
+    //                     "telefono": "0247742-2488",
+    //                     "email": "egb@sanjosepergamino.com.ar",
+    //                     "sector": "Privada"
+    //                 },
+    //                 "geometry": {
+    //                     "coordinates": [
+    //                         [
+    //                             [
+    //                                 -60.95189094543456
+    //                             ]
+    //                         ],
+    //                         [
+    //                             [
+    //                                 -34.58608959822379
+    //                             ]
+    //                         ]
+    //                     ],
+    //                     "type": "Point"
+    //                 },
+    //                 "_id": "5e3c6ba9e6957bb61620d7b0",
+    //                 "type": "Feature"
+    //             }
+    //         ],
+    //         "__v": 0
+    //     }
+    // ]
     }
-
     // async componentDidMount() {
     //     this.getGeo();
     // }
