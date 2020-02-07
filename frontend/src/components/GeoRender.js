@@ -7,19 +7,19 @@ export default class GeoRender extends Component {
     state = {
         all: '',
         description: '',
-        testEntidad:[]
+        eventosLista:[{"_id":"5e3c6ba9e6957bb61620d7af","description":"incendio en el parquee","features":[{"properties":{"desc":null,"image":null},"geometry":{"coordinates":[[[-60.95189094543456]],[[-34.58608959822379]]],"type":"Point"},"_id":"5e3c6ba9e6957bb61620d7b0","type":"Feature"}],"__v":0}]
     }
 
-    async componentDidMount() {
-        this.getGeo();
-    }
+    // async componentDidMount() {
+    //     this.getGeo();
+    // }
 
-    getGeo = async () => {
-        const res = await axios.get('http://localhost:4000/api/geo')
-        this.setState({
-            eventosLista: res.data
-        });
-    }
+    // getGeo = async () => {
+    //     const res = await axios.get('http://localhost:4000/api/geo')
+    //     this.setState({
+    //         eventosLista: res.data
+    //     });
+    // }
     // componentDidMount() {
     //     this.getGeo();
     // }
@@ -80,7 +80,7 @@ export default class GeoRender extends Component {
                 <form onSubmit={this.onSubmit} >
                     <div >
                         <input
-                            type="hidden"
+                            // type="hidden"
                             id="demo"
                         />
                     </div>
@@ -98,15 +98,17 @@ export default class GeoRender extends Component {
                 </form>
 
                 <div>
-                        <button type='submit' id="conver"> {/*//lo mete en el form */}
+                        <button id="conver"> {/*//lo mete en el form */}
                             {/* <button id="convert"> */}
                             testEntidad
                     </button>
                      <input
                         id='events'
                         className="form-control"
+                        // value={JSON.stringify(this.state.eventosLista)}
                         value={JSON.stringify(this.state.eventosLista)}
                         type="text"
+                        // placeholder="cucu"
                     />
             </div>
             </div>
