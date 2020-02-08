@@ -17,6 +17,7 @@ app.use(express.json());    //send json files
 // routes
 
 app.use('/api/geo', require('./routes/geo'));
+app.use('/api/entity', require('./routes/entity'));
 
 
 module.exports = app;

@@ -1,7 +1,22 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const entitySchema = new Schema({
+
+// const entitySchemaChildChild = new Schema({
+//   properties: [entitySchemaChild]
+// })
+// const entitySchemaChild = new Schema({
+//   tipoEntidad: { $type: String },
+//   nombre: { $type: String },
+//   direccion: { $type: String },
+//   telefono: { $type: String },
+//   email: { $type: String },
+//   sector: { $type: String },
+//   direccion: { $type: String },
+//   riesgo: [String]
+//   })
+
+  const entitySchema = new Schema({
   type: { $type: String, default: "FeatureCollection" },
 
   // Array of subdocuments
@@ -19,7 +34,7 @@ const entitySchema = new Schema({
     },
     geometry: {
         type: { $type: String, default: "Point" },
-        coordinates: [[[Number]]]
+        coordinates: { $type: String },
     }
   }],
   // Single subdocument

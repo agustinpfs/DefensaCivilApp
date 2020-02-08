@@ -23,6 +23,10 @@ export default class Navigation extends Component {
                                 <Link className="nav-link" to="/geo">geo</Link>
 
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/loaddata">Cargar data</Link>
+
+                            </li>
                         </ul>
                     </div>
 
