@@ -18,7 +18,7 @@ const entitySchema = new Schema({
         riesgo: [String]
     },
     geometry: {
-        type: { $type: String },
+        type: { $type: String, default: "Point" },
         coordinates: [[[Number]]]
     }
   }],
