@@ -21,10 +21,17 @@ entityCtrl.createEntity = async (req, res) => {
             email, 
             sector, 
             direccion, 
-            riesgo, 
-            coord     } = req.body;
-            // coor = JSON.parse(coord)
+            riesgo,
+            lat,
+            lon, 
+                 } = req.body;
+            la = parseFloat(lat)
+            lo = parseFloat(lon)
+            // lo = JSON.parse(lon)
+            coor = [la, lo]
             // const coorde = coor
+  //  const coord = [lat, lon] 
+// returns 3.14        
   console.log(tipoEntidad)
   const newEntity = new Entity({
 
@@ -40,7 +47,7 @@ entityCtrl.createEntity = async (req, res) => {
           riesgo: riesgo
       },
       geometry: {
-          coordinates: coord
+          coordinates: coor
       }
     }],
     // Single subdocument

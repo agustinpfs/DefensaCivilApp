@@ -34,7 +34,9 @@ const Schema = mongoose.Schema;
     },
     geometry: {
         type: { $type: String, default: "Point" },
-        coordinates: { $type: String },
+        // coordinates: [lat : { $type: String }, lon: { $type: String }],
+        // coordinates: [Number],
+        coordinates: [''],
     }
   }],
   // Single subdocument

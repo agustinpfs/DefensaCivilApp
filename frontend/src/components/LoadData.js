@@ -12,7 +12,9 @@ export default class LoadData extends Component {
         sector: '',
         direccion: '',
         riesgo: [],
-        coord: [] 
+        lat: '',
+        lon: '',
+        // coord: [] 
     }
 
 
@@ -39,7 +41,9 @@ export default class LoadData extends Component {
             sector: this.state.sector,
             direccion: this.state.direccion,
             riesgo: this.state.riesgo,
-            coord: this.state.coord,
+            coord: this.state.lat,
+            lat: this.state.coord,
+            lon: this.state.lon,
         });
         // this.setState({ username: '' });
         // this.getEntity();
@@ -136,13 +140,37 @@ export default class LoadData extends Component {
                                 // defaultValue={JSON.stringify(this.state.coord)}
                                      />
                         </div>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Latitud"
+                                onChange={this.onInputChange}
+                                name="lat"
+                                defaultValue={this.state.lat}
+                                // defaultValue={JSON.stringify(this.state.coord)}
+                                     />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Longitud"
+                                onChange={this.onInputChange}
+                                name="lon"
+                                defaultValue={this.state.lon}
+                                // defaultValue={JSON.stringify(this.state.coord)}
+                                     />
+                        </div>
 
                         <button type="submir">SAVE</button>
 
                     </form>
 <div className="">
                     {this.state.tipoEntidad}
-                    {this.state.coord}
+                    {/* {this.state.coord} */}
+                    {this.state.lat}
+                    {this.state.lon}
                     
                     </div>
             </div>
