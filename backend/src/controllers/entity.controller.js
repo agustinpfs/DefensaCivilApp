@@ -35,7 +35,7 @@ entityCtrl.createEntity = async (req, res) => {
   console.log(tipoEntidad)
   const newEntity = new Entity({
 
-    features: [{
+    features: {
       properties: {
         nombre: nombre,
         tipoEntidad: tipoEntidad,
@@ -49,7 +49,7 @@ entityCtrl.createEntity = async (req, res) => {
       geometry: {
           coordinates: coor
       }
-    }],
+    },
     // Single subdocument
   
   })
