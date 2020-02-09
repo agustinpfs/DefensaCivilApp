@@ -41,8 +41,8 @@ export default class LoadData extends Component {
             sector: this.state.sector,
             direccion: this.state.direccion,
             riesgo: this.state.riesgo,
-            coord: this.state.lat,
-            lat: this.state.coord,
+            // coord: this.state.lat,
+            lat: this.state.lat,
             lon: this.state.lon,
         });
         // this.setState({ username: '' });
