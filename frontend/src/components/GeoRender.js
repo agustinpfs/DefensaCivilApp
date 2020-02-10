@@ -14,9 +14,6 @@ export default class GeoRender extends Component {
 
 
 
-
-
-
     async componentDidMount() {
         this.getEntity();
     }
@@ -152,7 +149,8 @@ export default class GeoRender extends Component {
                             id='ente'
                             className="form-control"
                             // value={JSON.stringify(this.state.currententity)}
-                            value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                            // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                            value={JSON.stringify(this.state.currententity)}
 
                             type="text"
                         />
@@ -198,7 +196,7 @@ export default class GeoRender extends Component {
                 <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
                     <button type='submit' id="convert"> {/*//lo mete en el form */}
                         {/* <button id="convert"> */}
-                        GeoJSON
+                        AGREGAR DATA
                     </button>
                 </form>
 
