@@ -39,6 +39,7 @@ export default class EventsGeo extends Component {
         // window.location.reload(true);
 
 
+
         const eventos = this.state.descriptions
         const eventoDesc = this.state.descSelected
         // const currev = this.state.currentevent

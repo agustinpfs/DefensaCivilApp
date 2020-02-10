@@ -20,7 +20,7 @@ const Schema = mongoose.Schema;
   // type: { $type: String, default: "FeatureCollection" },
 
   // Array of subdocuments
-  features: {
+  // features: {
     type: { $type: String, default: "Feature" },
     properties: {
         tipoEntidad: { $type: String },
@@ -37,11 +37,11 @@ const Schema = mongoose.Schema;
         // coordinates: [lat : { $type: String }, lon: { $type: String }],
         // coordinates: [Number],
         coordinates: [''],
-    }
-  },
+    
+  }},
   // Single subdocument
 
-}, { typeKey: '$type' })
+ { typeKey: '$type' })
 
 
 

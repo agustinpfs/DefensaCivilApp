@@ -7,7 +7,9 @@ export default class GeoRender extends Component {
     state = {
         all: '',
         description: '',
-        eventosLista: []
+        entitySelected: '',
+        entidadLista: [],
+        currententity: []
     }
 
 
@@ -21,8 +23,12 @@ export default class GeoRender extends Component {
 
     getEntity = async () => {
         const res = await axios.get('http://localhost:4000/api/entity')
+        // const entidades = "features:" + res.data
+        // console.log(entidades)
         this.setState({
-            eventosLista: res.data
+            // entidadLista: entidades
+            entidadLista: res.data,
+            entitySelected: res.data[0].properties.nombre
         });
     }
     // componentDidMount() {
@@ -34,6 +40,25 @@ export default class GeoRender extends Component {
     //     this.setState({
     //         all: res.data
     //     });
+
+    currentEntity = (e) => {
+        // window.location.reload(true);
+
+        e.preventDefault();
+
+        const entidades = this.state.entidadLista
+        const entidadesNombre = this.state.entitySelected
+        // const currev = this.state.currentevent
+
+        for (let i = 0; i < entidades.length; i++) {
+            if (entidades[i].properties.nombre === entidadesNombre) {
+                this.setState({
+                    currententity: entidades[i]
+                });
+            }
+        }
+    }
+
         
 
     getElementandSet = (e) => {
@@ -58,6 +83,20 @@ export default class GeoRender extends Component {
     }
 
 
+
+
+    onInputChange = (e) => {
+        // e.onClick.target.value = this.currentEvent()
+        this.setState({
+            entitySelected: e.target.value   //input info - e.target.name->depending on the name use a data
+
+        })
+        // const es = e.target.value
+        // es.onClick = currentEvent()
+        // console.log(this.state.descSelected)
+    }
+
+
     render() {
         return (
             <div className="">
@@ -72,6 +111,88 @@ export default class GeoRender extends Component {
 
                 </Helmet>
                 <div id="map" className="clase"></div>
+
+
+
+
+
+
+{/* BUSCAR POR ENTIDAD */}
+{/* BUSCAR POR ENTIDAD */}
+{/* BUSCAR POR ENTIDAD */}
+
+
+
+
+
+<form id="opciones" onSubmit={this.currentEntity}>
+                        {/* SELECT THE USER */}
+                        <div className="form-group">
+
+
+                            <select
+                                // id="convert"
+                                className="form-control"
+                                value={this.state.entitySelected}
+                                onChange={this.onInputChange}
+                                name="entitySelected"
+                            >
+                                {
+                                    this.state.entidadLista.map(nom => (
+                                        <option >
+                                            {nom.properties.nombre}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+                        <br />
+                        <br />
+                        <input
+                            id='ente'
+                            className="form-control"
+                            // value={JSON.stringify(this.state.currententity)}
+                            value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+
+                            type="text"
+                        />
+                        <button type='submit'>
+                            submit
+                    </button>
+                    {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
+                        <button id="convertire" >
+                            automático
+                    </button>
+                    {/* <button id="ir">show(gg)</button> */}
+                        {/* <button type='submit'>
+                            submit
+                    </button> */}
+                        {/* <Link to={"/ListEvents"} id = 'convert'>
+                        showEvento
+                                    </Link> */}
+                    </form>
+
+
+
+
+{/* FIN BUSCAR POR ENTIDAD */}
+{/* FIN BUSCAR POR ENTIDAD */}
+{/* FIN BUSCAR POR ENTIDAD */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
@@ -110,14 +231,14 @@ export default class GeoRender extends Component {
                      <input
                         id='events'
                         className="form-control"
-                        // value={JSON.stringify(this.state.eventosLista)}
-                        value={JSON.stringify(this.state.eventosLista)}
+                        // value={JSON.stringify(this.state.entidadLista)}
+                        value={'{'+'"features":' + JSON.stringify(this.state.entidadLista)+'}'}
                         type="text"
                         // placeholder="cucu"
                     />
             </div>
-            {/* {this.state.eventosLista} */}
-            {JSON.stringify(this.state.eventosLista) + "AAAAAAAAAA"}
+            {/* {this.state.entidadLista} */}
+            {'aaaa' + JSON.stringify(this.state.entidadLista) + "AAAAAAAAAA"}
 
 
             </div>
