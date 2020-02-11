@@ -8,8 +8,10 @@ export default class GeoRender extends Component {
         all: '',
         description: '',
         entitySelected: '',
+        riscSelected: '',
         entidadLista: [],
-        currententity: []
+        currententity: [],
+        currentrisc:[]
     }
 
 
@@ -25,7 +27,8 @@ export default class GeoRender extends Component {
         this.setState({
             // entidadLista: entidades
             entidadLista: res.data,
-            entitySelected: res.data[0].properties.nombre
+            entitySelected: res.data[0].properties.nombre,
+            riscSelected: res.data[0].properties.riesgo
         });
     }
     // componentDidMount() {
@@ -40,17 +43,28 @@ export default class GeoRender extends Component {
 
     currentEntity = (e) => {
         // window.location.reload(true);
-
         e.preventDefault();
-
         const entidades = this.state.entidadLista
         const entidadesNombre = this.state.entitySelected
         // const currev = this.state.currentevent
-
         for (let i = 0; i < entidades.length; i++) {
             if (entidades[i].properties.nombre === entidadesNombre) {
                 this.setState({
                     currententity: entidades[i]
+                });
+            }
+        }
+    }
+    currentRisc = (e) => {
+        // window.location.reload(true);
+        e.preventDefault();
+        const entidades = this.state.entidadLista
+        const entidadesRiesgo = this.state.riscSelected
+        // const currev = this.state.currentevent
+        for (let i = 0; i < entidades.length; i++) {
+            if (entidades[i].properties.riesgo === entidadesRiesgo) {
+                this.setState({
+                    currentrisc: entidades[i]
                 });
             }
         }
@@ -180,19 +194,6 @@ export default class GeoRender extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
                     <button type='submit' id="convert"> {/*//lo mete en el form */}
                         {/* <button id="convert"> */}
@@ -237,6 +238,97 @@ export default class GeoRender extends Component {
             </div>
             {/* {this.state.entidadLista} */}
             {'aaaa' + JSON.stringify(this.state.entidadLista) + "AAAAAAAAAA"}
+
+            
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+{/* BUSCAR POR TIPO DE EVENTO */}
+
+
+
+<h3>SELECT RIESGO</h3>
+
+{/* <form id="opciones" onSubmit={this.currentEntity}> */}
+<form id="opciones" onSubmit={this.currentRisc}>
+                        {/* SELECT THE USER */}
+                        <div className="form-group">
+
+
+                            <select
+                                // id="convert"
+                                className="form-control"
+                                // value={this.state.entitySelected}
+                                value={this.state.riscSelected}
+                                onChange={this.onInputChange}
+                                // name="entitySelected"
+                                name="riscSelected"
+                            >
+                                {
+                                    // this.state.entidadLista.map(nom => (
+                                    this.state.entidadLista.map(risc => (
+                                        <option >
+                                            {/* {nom.properties.nombre} */}
+                                            {risc.properties.riesgo}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+                        <br />
+                        <br />
+                        <input
+                            // id='ente'
+                            id='enterisc'
+                            className="form-control"
+                            // value={JSON.stringify(this.state.currententity)}
+                            // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                            // value={JSON.stringify(this.state.currententity)}
+                            value={JSON.stringify(this.state.currentrisc)}
+
+                            type="text"
+                        />
+                        <button type='submit'>
+                            submit
+                    </button>
+                    {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
+                        {/* <button id="convertire" > */}
+                        <button id="convertirRiesgo" >
+                            sendToScript
+                    </button>
+                    {/* <button id="ir">show(gg)</button> */}
+                        {/* <button type='submit'>
+                            submit
+                    </button> */}
+                        {/* <Link to={"/ListEvents"} id = 'convert'>
+                        showEvento
+                                    </Link> */}
+                    </form>
+
+
+
+
+
+
+
+
+{/* FIN BUSCAR POR TIPO DE EVENTO */}
+{/* FIN BUSCAR POR TIPO DE EVENTO */}
+{/* FIN BUSCAR POR TIPO DE EVENTO */}
+{/* FIN BUSCAR POR TIPO DE EVENTO */}
+{/* FIN BUSCAR POR TIPO DE EVENTO */}
+
+
+
+
+
 
 
             </div>

@@ -1,342 +1,4 @@
-// [
-//     {
-//         "_id": "5e3c6ba9e6957bb61620d7af",
-//         "entityType": "Educación",
-//         "features": [
-//             {
-//                 "properties": {
-//                     "nombre": "COLEGIO SAN JOSE",
-//                     "nro": "461",
-//                     "direccion": "CHAMPAGNAT 1375",
-//                     "telefono": "0247742-2488",
-//                     "email": "egb@sanjosepergamino.com.ar",
-//                     "sector": "Privada"
-//                 },
-//                 "geometry": {
-//                     "coordinates": [
-//                         [
-//                             [
-//                                 -60.95189094543456
-//                             ]
-//                         ],
-//                         [
-//                             [
-//                                 -34.58608959822379
-//                             ]
-//                         ]
-//                     ],
-//                     "type": "Point"
-//                 },
-//                 "_id": "5e3c6ba9e6957bb61620d7b0",
-//                 "type": "Feature"
-//             }
-//         ],
-//         "__v": 0
-//     },
-//     {
-//         "_id": "5e3c6ba9e6957bb61620d8af",
-//         "entityType": "Educación",
-//         "features": [
-//             {
-//                 "properties": {
-//                     "nombre": "COLEGIO Spinchila",
-//                     "nro": "461",
-//                     "direccion": "CHAMPAGNAT 1375",
-//                     "telefono": "0247742-2488",
-//                     "email": "egb@sanjosepergamino.com.ar",
-//                     "sector": "Privada"
-//                 },
-//                 "geometry": {
-//                     "coordinates": [
-//                         [
-//                             [
-//                                 -60.95858573913574
-//                             ]
-//                         ],
-//                         [
-//                             [
-//                                 -34.5946746110185
-//                             ]
-//                         ]
-//                     ],
-//                     "type": "Point"
-//                 },
-//                 "_id": "5e3c6ba9e6957bb61625d7b0",
-//                 "type": "Feature"
-//             }
-//         ],
-//         "__v": 0
-//     }
-// ]
-// {
-//     "_id": "5e3c6ba9e6957bb61620d7af",
-//     "description": "incendio en el parque",
-//     "features": [
-//         {
-//             "properties": {
-//                 "desc": null,
-//                 "image": null
-//             },
-//             "geometry": {
-//                 "coordinates": [
-//                     [
-//                         [
-//                             -60.95189094543456
-//                         ]
-//                     ],
-//                     [
-//                         [
-//                             -34.58608959822379
-//                         ]
-//                     ]
-//                 ],
-//                 "type": "Point"
-//             },
-//             "_id": "5e3c6ba9e6957bb61620d7b0",
-//             "type": "Feature"
-//         }
-//     ],
-//     "__v": 0
-// }
-
-{
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "id": "primaria.2",
-            "geometry": {
-                "type": "MultiPoint",
-                "coordinates": [
-                    [
-                        -60.95189094543456,
-                        -34.58608959822379
-                    ]
-                ]
-            },
-            "geometry_name": "geom",
-            "properties": {
-                "clave": "4081PP0461",
-                "cue_anexo": "60532200",
-                "nombre": "COLEGIO SAN JOSE",
-                "nro": "461",
-                "direccion": "CHAMPAGNAT 1375",
-                "calles_ale": "E/M.DE ROSAS Y R.DE JANEIRO",
-                "telefono": "0247742-2488",
-                "cp": "2700",
-                "email": "egb@sanjosepergamino.com.ar",
-                "sector": "Privada"
-            }
-        },
-        {
-            "type": "Feature",
-            "id": "primaria.3",
-            "geometry": {
-                "type": "MultiPoint",
-                "coordinates": [
-                    [
-                        -60.95858573913574,
-                        -34.5946746110185
-                    ]
-                ]
-            },
-            "geometry_name": "geom",
-            "properties": {
-                "clave": "4081PP3131",
-                "cue_anexo": "61098800",
-                "nombre": "COLEGIO SAN PABLO",
-                "nro": "3131",
-                "direccion": "GUALBERTO ALVAREZ 401",
-                "calles_ale": null,
-                "telefono": "0247743-7254",
-                "cp": "2700",
-                "email": "sanpablosecretaria@gmail.com",
-                "sector": "Privada"
-            }
-        }]
-    }
-
-
-    // {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
-    //              [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.945625305175774,-34.58775014314323]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.94562530517518,-34.58775014314923]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]
-
-
-    {
-        "features": [
-            {
-                "properties": {
-                    "riesgo": [
-                        "incendioo"
-                    ],
-                    "nombre": "san pablo",
-                    "tipoEntidad": "edu",
-                    "direccion": "castro barros 100",
-                    "telefono": "03513044157",
-                    "email": "agustinpfs@gmail.com",
-                    "sector": "público"
-                },
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -60.95189094543456,
-                        -34.58608959822379
-                    ]
-                },
-                "type": "Feature",
-                "_id": "5e4091beeb9430dc2be140db",
-                "__v": 0
-            },
-            {
-                "properties": {
-                    "riesgo": [
-                        "incendioo"
-                    ],
-                    "nombre": "PIO X",
-                    "tipoEntidad": "edu",
-                    "direccion": "castro barros 100",
-                    "telefono": "035130441579999",
-                    "email": "agustin@gmail.com",
-                    "sector": "público"
-                },
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -60.95858573913574,
-                        -34.5946746110185
-                    ]
-                },
-                "type": "Feature",
-                "_id": "5e4091eaeb9430dc2be140dc",
-                "__v": 0
-            }
-        ]
-    }
-
-
-    [
-        {
-            "_id": "5e416ae966a45de09dc6d755",
-            "description": "accidente en la ruta",
-            "features": [
-                {
-                    "properties": {
-                        "desc": null,
-                        "image": null
-                    },
-                    "geometry": {
-                        "coordinates": [
-                            [
-                                [
-                                    -60.949702262878425
-                                ]
-                            ],
-                            [
-                                [
-                                    -34.587114193690574
-                                ]
-                            ]
-                        ],
-                        "type": "Point"
-                    },
-                    "_id": "5e416ae966a45de09dc6d757",
-                    "type": "Feature"
-                },
-                {
-                    "properties": {
-                        "desc": null,
-                        "image": null
-                    },
-                    "geometry": {
-                        "coordinates": [
-                            [
-                                [
-                                    -60.94601154327392
-                                ]
-                            ],
-                            [
-                                [
-                                    -34.58972862142538
-                                ]
-                            ]
-                        ],
-                        "type": "Point"
-                    },
-                    "_id": "5e416ae966a45de09dc6d756",
-                    "type": "Feature"
-                }
-            ],
-            "__v": 0
-        }
-    ]
-
-
-
-    [
-        {
-            "properties": {
-                "riesgo": [
-                    "incendio"
-                ],
-                "nombre": "PIO X",
-                "tipoEntidad": "educación",
-                "direccion": "castro barros 100",
-                "telefono": "03513044157",
-                "email": "agustinpfs@gmail.com",
-                "sector": "público"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -60.945625305175774,
-                    -34.58481766903432
-                ]
-            },
-            "type": "Feature",
-            "_id": "5e40cff566a45de09dc6d753",
-            "__v": 0
-        },
-        {
-            "properties": {
-                "riesgo": [
-                    "incendioo"
-                ],
-                "nombre": "PIO Xll",
-                "tipoEntidad": "educación",
-                "direccion": "castro barros 100",
-                "telefono": "03513088888",
-                "email": "agustin@gmail.com",
-                "sector": "público"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -60.940303802490234,
-                    -34.58340439154656
-                ]
-            },
-            "type": "Feature",
-            "_id": "5e40d04966a45de09dc6d754",
-            "__v": 0
-        }
-    ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[
     {
         "properties": {
             "riesgo": [
@@ -359,4 +21,51 @@
         "type": "Feature",
         "_id": "5e40cff566a45de09dc6d753",
         "__v": 0
+    },
+    {
+        "properties": {
+            "riesgo": [
+                "incendioo"
+            ],
+            "nombre": "PIO Xll",
+            "tipoEntidad": "educación",
+            "direccion": "castro barros 100",
+            "telefono": "03513088888",
+            "email": "agustin@gmail.com",
+            "sector": "público"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -60.940303802490234,
+                -34.58340439154656
+            ]
+        },
+        "type": "Feature",
+        "_id": "5e40d04966a45de09dc6d754",
+        "__v": 0
+    },
+    {
+        "properties": {
+            "riesgo": [
+                "inundación"
+            ],
+            "nombre": "san pablo",
+            "tipoEntidad": "educación",
+            "direccion": "castro barros 100",
+            "telefono": "03513044157",
+            "email": "agustinpfs@gmail.com",
+            "sector": "privado"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -60.945625305175774,
+                -34.58481766903432
+            ]
+        },
+        "type": "Feature",
+        "_id": "5e41e6ee23051ce77c194d6e",
+        "__v": 0
     }
+]

@@ -151,4 +151,26 @@ document.getElementById("convertire").addEventListener("click", function () {
     entidades()
 
 });
+document.getElementById("convertirRiesgo").addEventListener("click", function () {
+    const bbb = document.getElementById("enterisc")
+    console.log(bbb.value)
+    // console.log(ccc.value)
+
+    const off = bbb.value
+    const seff = off.slice(1, -1);
+    console.log(seff);
+    function riesgos() {
+        const sendEntity = JSON.parse(off);
+        // const sendEntity =  {"features":[{"properties":{"riesgo":["incendio"],"nombre":"PIO X","tipoEntidad":"educación","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.945625305175774,-34.58481766903432]},"type":"Feature","_id":"5e40cff566a45de09dc6d753","__v":0}]}
+        // const sendlista =  {"features":[{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543956,-33.58608959822979]},"type":"Feature","_id":"5e40ae6f6e61f9dfb3f619dd","__v":0},{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e40ae986e61f9dfb3f619de","__v":0}]}
+        // const sendlista =  {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
+
+        // console.log(sec)
+        // L.geoJson([sendlista]).addTo(map);
+        L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(map);
+
+    }
+    riesgos()
+
+});
 
