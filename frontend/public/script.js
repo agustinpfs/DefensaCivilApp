@@ -49,7 +49,7 @@ map.on('click', onMapClick);
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties.nombre) {
-        layer.bindPopup('<b>'+"COLEGIO " +'</b>' + feature.properties.nombre + '<br>' + '<b>'+"DIRECCIÓN " +'</b>' +feature.properties.direccion);
+        layer.bindPopup('<b>' + "COLEGIO " + '</b>' + feature.properties.nombre + '<br>' + '<b>' + "DIRECCIÓN " + '</b>' + feature.properties.direccion);
     }
 }
 
@@ -103,27 +103,49 @@ document.getElementById("conver").addEventListener("click", function () {
 // Muestra una entidad
 // Muestra una entidad
 
-// document.getElementById("ir").addEventListener("click",  function () {
+// document.getElementById("ir").addEventListener("click", function () {
 //     function na() {
 //         var evt = new Event('click');
-//         var button = document.getElementById('convertir');
+//         var button = document.getElementById('convID');
 //         // This is where the magic happens
 //         button.dispatchEvent(evt);
 //     }
 
-//     setTimeout (function name() {
-//     var ev = new Event('click');
-// var butto = document.getElementById('convertir');
-// // This is where the magic happens
-// butto.dispatchEvent(ev);
-// }, 300)
+//     setTimeout(function name() {
+//         var ev = new Event('click');
+//         var butto = document.getElementById('convID');
+//         // This is where the magic happens
+//         butto.dispatchEvent(ev);
+//     }, 300)
 
 
 
-// na()
-// name()
+//     na()
+//     name()
 
 // })
+
+
+document.getElementById("ir").addEventListener("click",  function () {
+    function na() {
+        var evt = new Event('click');
+        var button = document.getElementById('convertirRiesgo');
+        // This is where the magic happens
+        button.dispatchEvent(evt);
+    }
+
+    setTimeout (function name() {
+        var evt = new Event('click');
+        var button = document.getElementById('convertirRiesgo');
+        // This is where the magic happens
+        button.dispatchEvent(evt);
+    },300)
+
+
+na()
+name()
+    
+})
 
 
 
@@ -156,7 +178,7 @@ document.getElementById("convertirRiesgo").addEventListener("click", function ()
     console.log(bbb.value)
     // console.log(ccc.value)
 
-    const off = ' {"features":'+bbb.value+'}'
+    const off = ' {"features":' + bbb.value + '}'
     const seff = off.slice(1, -1);
     console.log(seff);
     function riesgos() {
