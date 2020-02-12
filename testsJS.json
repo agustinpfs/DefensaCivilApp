@@ -1,8 +1,9 @@
-[
+
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "COLEGIO SAN JOSE",
             "tipoEntidad": "educación",
@@ -20,14 +21,13 @@
                 -34.58481766903432
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendioo"
+                "incendioo",
+                "inundación"
             ],
             "nombre": "COLEGIO SAN PABLO",
             "tipoEntidad": "educación",
@@ -45,13 +45,12 @@
                 -34.58340439154656
             ]
         },
-        "type": "Feature",
-        "_id": "5e40d04966a45de09dc6d754",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
+                "incendio",
                 "inundación"
             ],
             "nombre": "ESCUELA HOGAR DE JESUS",
@@ -66,18 +65,17 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95712661743163,
+                -34.583757713171714
             ]
         },
-        "type": "Feature",
-        "_id": "5e41e6ee23051ce77c194d6e",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "ESCUELA PRIMARIA Nº30 \"GENERAL SAN MARTIN\"",
             "tipoEntidad": "educación",
@@ -91,18 +89,17 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.942277908325195,
+                -34.584499683695064
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "ESCUELA PRIMARIA Nº34 \"JOSE LORENZO MORENO\"",
             "tipoEntidad": "educación",
@@ -116,18 +113,17 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.94090461730957,
+                -34.58626625351593
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "COLEGIO NUESTRA SEÑORA DEL HUERTO",
             "tipoEntidad": "educación",
@@ -141,18 +137,17 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.94202041625976,
+                -34.57591361962323
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "ESCUELA MONSEÑOR SCALABRINI",
             "tipoEntidad": "educación",
@@ -166,18 +161,17 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95094680786132,
+                -34.577397694098806
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
             "nombre": "ESCUELA PRIMARIA Nº31 \"SILVERIO F. VAZQUEZ\"",
             "tipoEntidad": "educación",
@@ -191,21 +185,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.931034088134766,
+                -34.58100176465939
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "ESCUELA PRIMARIA SANTA JULIA",
-            "tipoEntidad": "educación",
+            "nombre": "Centro Salud 1",
+            "tipoEntidad": "Centro Salud",
             "nro": "5909",
             "direccion": "ALBERDI 2965",
             "telefono": "0247742-1566",
@@ -216,21 +208,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.93317985534667,
+                -34.57139056257011
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "INSTITUTO DE CAPACITACION Y DESARROLLO",
-            "tipoEntidad": "educación",
+            "nombre": "Centro Salud 2",
+            "tipoEntidad": "Centro Salud",
             "nro": "5802",
             "direccion": "ITALIA 151",
             "telefono": "0247742-4455",
@@ -241,22 +231,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92845916748047,
+                -34.58919867650491
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "SAN AGUSTIN",
-             "tipoEntidad": "Centro salud",
-             "tipoEntidad": "Centro salud",
+            "nombre": "Centro Salud 3",
+            "tipoEntidad": "Centro Salud",
             "nro": "9000",
             "direccion": "LAGOS 602",
             "telefono": "0247741-4100",
@@ -267,23 +254,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95283508300781,
+                -34.59414469764633
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "PIO X",
-             "tipoEntidad": "Centro salud",
-             "tipoEntidad": "Centro salud",
-            "tipoEntidad": "educación",
+            "nombre": "Centro Salud 4",
+            "tipoEntidad": "Centro Salud",
             "direccion": "castro barros 100",
             "telefono": "03513044157",
             "email": "agustinpfs@gmail.com",
@@ -292,22 +275,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.96313476562499,
+                -34.589551973494125
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº1 \"PTE. JULIO A. ROCA\"",
-             "tipoEntidad": "Centro salud",
-             "tipoEntidad": "Centro salud",
+            "nombre": "Centro Salud 5",
+            "tipoEntidad": "Centro Salud",
             "nro": "1",
             "direccion": "MERCED 618",
             "telefono": "0247742-3742",
@@ -318,22 +298,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.96313476562499,
+                -34.57782171051106
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "accidente"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº48 \"MANUEL ALBERTI\"",
-             "tipoEntidad": "Centro salud",
-             "tipoEntidad": "Centro salud",
+            "nombre": "Centro Salud 6",
+            "tipoEntidad": "Centro Salud",
             "nro": "48",
             "direccion": "AV ANTONIO RIVERO S/N",
             "telefono": "0247742-3704",
@@ -344,21 +321,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95163345336913,
+                -34.58163776088898
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº49 \"SAN FRANCISCO DEL MONTE\"",
-             "tipoEntidad": "Centro salud",
+            "nombre": "Estación de Servicio 1",
+            "tipoEntidad": "Depósito Combustible",
             "nro": "49",
             "direccion": "CAMINO RURAL DEL CARMEN S/N",
             "telefono": "247715-34-6599",
@@ -369,22 +344,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.94279289245606,
+                -34.56835149540769
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº5 \"JOSE HERNANDEZ\"",
-             "tipoEntidad": "Organismo Público",
-
+            "nombre": "Estación de Servicio 2",
+            "tipoEntidad": "Depósito Combustible",
             "nro": "5",
             "direccion": "SCHUMACHER 1500",
             "telefono": "0247743-3164",
@@ -395,22 +367,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.955839157104485,
+                -34.57541892224359
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº50 \"JUAN JOSE CASTELLI\"",
-             "tipoEntidad": "Organismo Público",
-
+            "nombre": "Estación de Servicio 3",
+            "tipoEntidad": "Depósito Combustible",
             "nro": "50",
             "direccion": "GRAL. MOSCONI 1920",
             "telefono": "0247743-7172",
@@ -421,22 +390,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.94021797180176,
+                -34.59294354815492
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº53 \"PTE. ARTURO V. ILLIA\"",
-             "tipoEntidad": "Organismo Público",
-
+            "nombre": "Estación de Servicio 4",
+            "tipoEntidad": "Depósito Combustible",
             "nro": "53",
             "direccion": "BALBOA 586",
             "telefono": "0247742-4713",
@@ -447,22 +413,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92717170715332,
+                -34.57485355020498
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº54 \"TIERRA DEL FUEGO\"",
-             "tipoEntidad": "Organismo Público",
-
+            "nombre": "Estación de Servicio 5",
+            "tipoEntidad": "Depósito Combustible",
             "nro": "54",
             "direccion": "SANTA ANA 380",
             "telefono": "0247749-3017",
@@ -473,23 +436,20 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.96588134765625,
+                -34.581991090024715
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº56 \"VICENTE LOPEZ Y PLANES\"",
-             "tipoEntidad": "Organismo Público",
-
-            "nro": "56",
+            "nombre": "Organismo Público 1",
+            "tipoEntidad": "Organismo Público",
             "direccion": "FRANCISCO AYERZA S/N",
             "telefono": "0247715-34-6600",
             "cp": "2701",
@@ -499,22 +459,20 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.939102172851555,
+                -34.57937641885099
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº52 \"GREGORIA SALAS\"",
-             "tipoEntidad": "Depósito Combustible",
-
+            "nombre": "Organismo Público 2",
+            "tipoEntidad": "Organismo Público",
             "nro": "52",
             "direccion": "MANSILLA 808",
             "telefono": "0247742-2131",
@@ -525,22 +483,20 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.9469985961914,
+                -34.590187904289024
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
-            "nombre": "ESCUELA PRIMARIA N°27 \"FRANCISCO URRUTIA\"",
-             "tipoEntidad": "Depósito Combustible",
-
+            "nombre": "Organismo Público 3",
+            "tipoEntidad": "Organismo Público",
             "nro": "27",
             "direccion": "Campo Urrutia - Ruta 178 km 22",
             "telefono": "02477-346591",
@@ -551,22 +507,20 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.93154907226562,
+                -34.58524164759393
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "incendio",
+                "inundación"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº10 \"CORNELIO SAAVEDRA\"",
-             "tipoEntidad": "Depósito Combustible",
-
+            "nombre": "Organismo Público 4",
+            "tipoEntidad": "Organismo Público",
             "nro": "10",
             "direccion": "AMEGHINO 131",
             "telefono": "0247744-3543",
@@ -577,22 +531,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.962104797363274,
+                -34.58425236092333
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº11 \"JUAN JOSE PASO\"",
-             "tipoEntidad": "Depósito Combustible",
-
+            "nombre": "Organismo Público 5",
+            "tipoEntidad": "Organismo Público",
             "nro": "11",
             "direccion": "127 Y DIAGONAL S/N",
             "telefono": "0247743-7608",
@@ -603,22 +554,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.925884246826165,
+                -34.58149642881411
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº15 \"LUCILA ANCHORENA DE URQUIZA\"",
-             "tipoEntidad": "Depósito Combustible",
-
+            "nombre": "Lugar evento masivo 1",
+            "tipoEntidad": "Lugar evento masivo",
             "nro": "15",
             "direccion": "SALTA S/N",
             "telefono": "0247749-9182",
@@ -629,20 +577,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95171928405762,
+                -34.57033043547793
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº16 \"GENERAL JOSE DE SAN MARTIN\"",
+            "nombre": "Lugar evento masivo 2",
+            "tipoEntidad": "Lugar evento masivo",
             "nro": "16",
             "direccion": "FLORIDA 1111",
             "telefono": "0247743-7414",
@@ -653,20 +600,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92717170715332,
+                -34.56835149540769
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº18 \"REPUBLICA ARGENTINA\"",
+            "nombre": "Lugar evento masivo 3",
+            "tipoEntidad": "Lugar evento masivo",
             "nro": "18",
             "direccion": "GOLONDRINAS 2842",
             "telefono": "0247743-7668",
@@ -677,20 +623,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.95832824707031,
+                -34.59237829532613
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº19 \"JUAN LARREA\"",
+            "nombre": "Club 1",
+            "tipoEntidad": "Club",
             "nro": "19",
             "direccion": "ASCASUBI 440",
             "telefono": "0247715-68-4113",
@@ -701,20 +646,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.97008705139161,
+                -34.586160260385704
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº2 \"NUESTRA SEÑORA DE LAS MERCEDES\"",
+            "nombre": "Club 2",
+            "tipoEntidad": "Club",
             "nro": "2",
             "direccion": "FLORIDA 425",
             "telefono": "0247742-4045",
@@ -725,20 +669,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.94399452209472,
+                -34.59767738961
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
-                "incendio"
+                "amenaza climática"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº20 \"MARIA MAGDALENA GÜEMES\"",
+            "nombre": "Club 3",
+            "tipoEntidad": "Club",
             "nro": "20",
             "direccion": "JUAN B. ALBERDI Nro 250",
             "telefono": "0247749-8117",
@@ -749,20 +692,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92863082885743,
+                -34.598030650543215
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº21 \"REMEDIOS ESCALADA DE SAN MARTIN\"",
+            "nombre": "Club 4",
+            "tipoEntidad": "Club",
             "nro": "21",
             "direccion": "RUTA 51 KM 35 S/N",
             "telefono": "247715-46-4076",
@@ -773,20 +715,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92193603515625,
+                -34.589622632711695
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº22 \"DOMINGO FAUSTINO SARMIENTO\"",
+            "nombre": "Club 5",
+            "tipoEntidad": "Club",
             "nro": "22",
             "direccion": "AV DE MAYO 1165",
             "telefono": "0247742-4840",
@@ -797,20 +738,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.96665382385254,
+                -34.59181303865144
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº23 \"REMEDIOS DE ESCALADA DE SAN MARTIN\"",
+            "nombre": "Hogar Acogida 1",
+            "tipoEntidad": "Hogar Acogida",
             "nro": "23",
             "direccion": "CALLE 8  8",
             "telefono": "0247748-3104",
@@ -821,20 +761,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.93541145324707,
+                -34.57400548493766
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº24 \"GRAL. MANUEL BELGRANO\"",
+            "nombre": "Hogar Acogida 2",
+            "tipoEntidad": "Hogar Acogida",
             "nro": "24",
             "direccion": "LORENZO MORENO 845",
             "telefono": "0247749-5041",
@@ -845,20 +784,19 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.92674255371094,
+                -34.57732702448648
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
+        "type": "Feature"
     },
     {
         "properties": {
             "riesgo": [
                 "incendio"
             ],
-            "nombre": "ESCUELA PRIMARIA Nº26 \"DOMINGO FAUSTINO SARMIENTO\"",
+            "nombre": "Hogar Acogida 3",
+            "tipoEntidad": "Hogar Acogida",
             "nro": "26",
             "direccion": "ZONA RURAL Nro S/N",
             "telefono": "0247715-34-6590",
@@ -869,842 +807,9 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
+                -60.921592712402344,
+                -34.5752069081797
             ]
         },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "ESCUELA PRIMARIA Nº29 \"DOMINGO FAUSTINO SARMIENTO\"",
-            "nro": "29",
-            "direccion": "CAMINO RURAL E/ACEVEDO Y LA VIOLETA Nro S/N",
-            "telefono": "0298347-0252",
-            "cp": "2717",
-            "email": null,
-            "sector": "Estatal"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "ESCUELA PRIMARIA Nº3 \"CORONEL JULIO S.DANTAS\"",
-            "nro": "3",
-            "direccion": "PERGAMINO 670",
-            "telefono": "0247749-4076",
-            "cp": "2713",
-            "email": "primaria3-ocampo@hotmail.com",
-            "sector": "Estatal"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-    {
-        "properties": {
-            "riesgo": [
-                "incendio"
-            ],
-            "nombre": "PIO X",
-            "tipoEntidad": "educación",
-            "direccion": "castro barros 100",
-            "telefono": "03513044157",
-            "email": "agustinpfs@gmail.com",
-            "sector": "público"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -60.945625305175774,
-                -34.58481766903432
-            ]
-        },
-        "type": "Feature",
-        "_id": "5e40cff566a45de09dc6d753",
-        "__v": 0
-    },
-]
+        "type": "Feature"
+    }
