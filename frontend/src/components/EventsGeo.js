@@ -12,9 +12,31 @@ export default class EventsGeo extends Component {
         descriptions: [],
         currentevent: []
     }
+    // refreshPage = () => {
+    //     location.reload();
+    // }
 
     async componentDidMount() {
+        (function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+        // window.location.reload(false);
+
+        // setTimeout(function refreshPage() {
+        //     window.location.reload();
+        // }, 500)
         this.getGeo();
+        // this.refreshPage();
         // this.currentEvent()
         // {this.currentEvent}
         const res = await axios.get('http://localhost:4000/api/geo');
