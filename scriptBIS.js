@@ -39,7 +39,7 @@ var popup = L.popup();
 
 function onMapClick(e) {
     // var newMarker = new L.marker(e.latlng).addTo(map);
-    // newMarker.bindPopup(e.latlng.toString()).openPopup()
+    newMarker.bindPopup(e.latlng.toString()).openPopup()
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
 }
@@ -77,31 +77,77 @@ document.getElementById("convert").addEventListener("click", function () {
 });
 
 
+const cc = document.getElementById("events")
+console.log(cc.value)
+const ot = cc.value
+const sec = ot.slice(1, -1);
+console.log(sec);
+
+console.log('cc')
+document.getElementById("conver").addEventListener("click", function () {
+    function eventos() {
+        const sendlista = JSON.parse(ot);
+        // const sendlista =  {"features":[{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543956,-33.58608959822979]},"type":"Feature","_id":"5e40ae6f6e61f9dfb3f619dd","__v":0},{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e40ae986e61f9dfb3f619de","__v":0}]}
+        // const sendlista =  {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
+
+        // console.log(sec)
+        // L.geoJson([sendlista]).addTo(map);
+        L.geoJson([sendlista], { onEachFeature: onEachFeature }).addTo(map);
+
+    }
+    eventos()
+
+});
+
 // Muestra una entidad
 // Muestra una entidad
 // Muestra una entidad
 
-// document.getElementById("ir").addEventListener("click", function () {
-//     function na() {
-//         var evt = new Event('click');
-//         var button = document.getElementById('convID');
-//         // This is where the magic happens
-//         button.dispatchEvent(evt);
-//     }
+document.getElementById("Xentidad").addEventListener("click", function () {
+    function na() {
+        var evt = new Event('click');
+        var button = document.getElementById('convertire');
+        // This is where the magic happens
+        button.dispatchEvent(evt);
+    }
 
-//     setTimeout(function name() {
-//         var ev = new Event('click');
-//         var butto = document.getElementById('convID');
-//         // This is where the magic happens
-//         butto.dispatchEvent(ev);
-//     }, 300)
+    setTimeout(function name() {
+        var ev = new Event('click');
+        var butto = document.getElementById('convertire');
+        // This is where the magic happens
+        butto.dispatchEvent(ev);
+    }, 300)
 
 
 
-//     na()
-//     name()
+    na()
+    name()
 
-// })
+})
+
+
+document.getElementById("convertire").addEventListener("click", function () {
+    const ccc = document.getElementById("ente")
+    console.log(ccc.value)
+
+    const ott = ccc.value
+    const secc = ott.slice(1, -1);
+    console.log(secc);
+    function entidades() {
+        const sendEntity = JSON.parse(ott);
+        // const sendEntity =  {"features":[{"properties":{"riesgo":["incendio"],"nombre":"PIO X","tipoEntidad":"educación","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.945625305175774,-34.58481766903432]},"type":"Feature","_id":"5e40cff566a45de09dc6d753","__v":0}]}
+        // const sendlista =  {"features":[{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543956,-33.58608959822979]},"type":"Feature","_id":"5e40ae6f6e61f9dfb3f619dd","__v":0},{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e40ae986e61f9dfb3f619de","__v":0}]}
+        // const sendlista =  {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
+
+        // console.log(sec)
+        // L.geoJson([sendlista]).addTo(map);
+        L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(map);
+
+    }
+    entidades()
+
+});
+
 
 
 document.getElementById("ir").addEventListener("click",  function () {
@@ -126,51 +172,10 @@ name()
 })
 
 
-document.getElementById("Xentidad").addEventListener("click", function () {
-    function na() {
-        var evt = new Event('click');
-        var button = document.getElementById('convertire');
-        // This is where the magic happens
-        button.dispatchEvent(evt);
-    }
-
-    setTimeout(function name() {
-        var ev = new Event('click');
-        var butto = document.getElementById('convertire');
-        // This is where the magic happens
-        butto.dispatchEvent(ev);
-    }, 300)
 
 
 
-    na()
-    // name()
 
-})
-
-
-
-document.getElementById("convertire").addEventListener("click", function () {
-    const ccc = document.getElementById("ente")
-    console.log(ccc.value)
-
-    const ott = ccc.value
-    const secc = ott.slice(1, -1);
-    console.log(secc);
-    function entidades() {
-        const sendEntity = JSON.parse(ott);
-        // const sendEntity =  {"features":[{"properties":{"riesgo":["incendio"],"nombre":"PIO X","tipoEntidad":"educación","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.945625305175774,-34.58481766903432]},"type":"Feature","_id":"5e40cff566a45de09dc6d753","__v":0}]}
-        // const sendlista =  {"features":[{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543956,-33.58608959822979]},"type":"Feature","_id":"5e40ae6f6e61f9dfb3f619dd","__v":0},{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e40ae986e61f9dfb3f619de","__v":0}]}
-        // const sendlista =  {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
-
-        // console.log(sec)
-        // L.geoJson([sendlista]).addTo(map);
-        L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(map);
-
-    }
-    entidades()
-
-});
 document.getElementById("convertirRiesgo").addEventListener("click", function () {
     const bbb = document.getElementById("enterisc")
     console.log(bbb.value)
@@ -195,3 +200,4 @@ document.getElementById("convertirRiesgo").addEventListener("click", function ()
 
 });
 
+q

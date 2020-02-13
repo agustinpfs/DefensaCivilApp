@@ -1,9 +1,15 @@
 .clase {
     width: 700px; 
     height: 400px;
+    display: inline-block
     /* display: none; */
     /* position: absolute; */
   };
+
+.inline {
+  display: inline-block;
+  max-width: 500px;
+}
 
 /* #mapa{
 
