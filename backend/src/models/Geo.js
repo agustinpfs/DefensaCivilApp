@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const geoSchema = new Schema({
   description: { $type: String },
   type: { $type: String },  
+  // date: { type: Date, default: Date.now },
 
   // Array of subdocuments
   features: [{

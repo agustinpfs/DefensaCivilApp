@@ -15,12 +15,13 @@ geoCtrl.getGeo = async (req, res) => {
 
 geoCtrl.createGeo = async (req, res) => {
 
-  const { all, description } = req.body;
+  const { all, description, date } = req.body;
   const allObject = JSON.parse(all)
   const typeNested = allObject.features
   const desc = description
   
   const newGeo = new Geo({
+          'date': date,
           'description': desc,
           'features': typeNested
       });

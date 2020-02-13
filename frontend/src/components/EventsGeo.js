@@ -9,6 +9,7 @@ export default class EventsGeo extends Component {
     state = {
         eventosLista: [],
         descSelected: '',
+        dateSelected: '',
         descriptions: [],
         currentevent: []
     }
@@ -42,7 +43,8 @@ export default class EventsGeo extends Component {
             this.setState({
                 // descriptions: res.data.map(desc => desc.description),
                 descriptions: res.data,
-                descSelected: res.data[0].description
+                descSelected: res.data[0].description,
+                // dateSelected: res.data[0].date
             })
         }
 
@@ -70,14 +72,31 @@ export default class EventsGeo extends Component {
                 });
             }
         }
-        //    function  showHide () {
-        //         document.getElementById("opciones").style.display = "none";
-        //         document.getElementById("mapid").style.width = "400px";
-        //         document.getElementById("mapid").style.height = "400px";
-        //         // document.getElementById("mapa").style.display = "block";
+           function  showHide () {
+                document.getElementById("opciones").style.display = "none";
+                // document.getElementById("mapid").style.width = "400px";
+                // document.getElementById("mapid").style.height = "400px";
+                document.getElementById("showDesc").style.display = "block";
 
-        //    }
-        //       showHide()
+           }
+              showHide()
+    }
+    buttonVolverElegir = () => {
+        // document.getElementById("opciones").style.display = "block";
+        // // document.getElementById("mapid").style.width = "400px";
+        // // document.getElementById("mapid").style.height = "400px";
+        // document.getElementById("showDesc").style.display = "none";
+
+        (function () {
+            if (window.localStorage) {
+                if (!localStorage.getItem('firstLoad')) {
+                    localStorage['firstLoad'] = true;
+                    window.location.reload();
+                }
+                else
+                    localStorage.removeItem('firstLoad');
+            }
+        })();
     }
 
     onSubmit = async (e) => {
@@ -100,8 +119,10 @@ export default class EventsGeo extends Component {
         console.log(this.state.descSelected)
     }
 
-
-
+    Date = (f) => {
+    var f = new Date();
+    return (f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+    }
 
 
 
@@ -121,6 +142,7 @@ export default class EventsGeo extends Component {
                     <script src="eventScript.js"></script>
 
                 </Helmet>
+                        <h4>Buscar evento por descripción</h4>
                 <div className="row">
                     {/* {<script src="eventScript.js"></script>} */}
                     {/* {console.log(this.state.eventosLista)} */}
@@ -139,6 +161,7 @@ export default class EventsGeo extends Component {
                         {/* <button onLoad={this.currentEvent}>curr</button> */}
 
                     </div>
+                            <br/>
                     <form id="opciones" onSubmit={this.onSubmit}>
                         {/* SELECT THE USER */}
                         <div className="form-group">
@@ -150,44 +173,46 @@ export default class EventsGeo extends Component {
                                 value={this.state.descSelected}
                                 onChange={this.onInputChange}
                                 name="descSelected"
-                            // onClick= {this.currentEvent}
-                            // placeholder="Type or select a stock here..."
-                            // isDisabled={this.props.disabled}
-                            // onClick= {this.showHide}
-                            // required
-                            >
+                                // onClick= {this.currentEvent}
+                                // placeholder="Type or select a stock here..."
+                                // isDisabled={this.props.disabled}
+                                // onClick= {this.showHide}
+                                // required
+                                >
                                 {/* {
                                     this.state.descriptions.map(desc => (
                                         <option key={desc} value={desc}>
-                                            {desc}
+                                        {desc}
                                         </option>
-                                    ))
-                                }
+                                        ))
+                                    }
                                 </select> */}
                                 {
                                     this.state.descriptions.map(desc => (
                                         <option key={desc.id}>
                                             {desc.description}
+                                            {/* {desc.description + this.Date()} */}
+                                            
                                         </option>
                                     ))
                                 }
                             </select>
                         </div>
                         <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
                         <input
                             id='events'
                             className="form-control"
                             value={JSON.stringify(this.state.currentevent)}
                             type="text"
+                            style={{ display: "none" }}
                         />
-                        <button id="convert" type='submit'>
-                            showEvento
+                        <button id="convert" type='submit' style={{ display: "none" }}>
+                        
+
+                            showEvento(oculto)
                     </button>
-                        <button id="fer">gggggggggg</button>
+                        <button id="fer">Mostrar Evento</button>
+                        {/* <p> {this.Date()} </p> */}
                         {/* <button type='submit'>
                             submit
                     </button> */}
@@ -195,6 +220,10 @@ export default class EventsGeo extends Component {
                         showEvento
                                     </Link> */}
                     </form>
+                    <div id="showDesc" style={{display: "none"}}> 
+                    <h1 >  {this.state.descSelected}</h1>
+                    <button id="volverElegir" onClick = {this.buttonVolverElegir}>  Elegir otro evento</button>
+                    </div>
                     <p>
                         {/* {this.state.descSelected} */}
                         {/* {JSON.stringify(this.state.currentevent) + "AAAAAAAAAA"} */}
