@@ -1,14 +1,21 @@
 .clase {
-    width: 700px; 
+    width: 600px; 
     height: 400px;
-    display: inline-block
+    margin-right: 2em;
+    margin-bottom: 12em;
+    /* display: inline-block */
     /* display: none; */
     /* position: absolute; */
   };
 
 .inline {
-  display: inline-block;
-  max-width: 500px;
+  display: inline-block !important;
+  /* max-width: 500px; */
+  width: 30%;
+}
+
+.ancho{
+  width: 100%;
 }
 
 /* #mapa{

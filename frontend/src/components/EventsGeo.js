@@ -17,19 +17,16 @@ export default class EventsGeo extends Component {
     // }
 
     async componentDidMount() {
-        (function()
-{
-  if( window.localStorage )
-  {
-    if( !localStorage.getItem('firstLoad') )
-    {
-      localStorage['firstLoad'] = true;
-      window.location.reload();
-    }  
-    else
-      localStorage.removeItem('firstLoad');
-  }
-})();
+        (function () {
+            if (window.localStorage) {
+                if (!localStorage.getItem('firstLoad')) {
+                    localStorage['firstLoad'] = true;
+                    window.location.reload();
+                }
+                else
+                    localStorage.removeItem('firstLoad');
+            }
+        })();
         // window.location.reload(false);
 
         // setTimeout(function refreshPage() {
@@ -190,7 +187,7 @@ export default class EventsGeo extends Component {
                         <button id="convert" type='submit'>
                             showEvento
                     </button>
-                    <button id="fer">gggggggggg</button>
+                        <button id="fer">gggggggggg</button>
                         {/* <button type='submit'>
                             submit
                     </button> */}
@@ -200,7 +197,7 @@ export default class EventsGeo extends Component {
                     </form>
                     <p>
                         {/* {this.state.descSelected} */}
-                        {JSON.stringify(this.state.currentevent) + "AAAAAAAAAA"}
+                        {/* {JSON.stringify(this.state.currentevent) + "AAAAAAAAAA"} */}
                         {/* {JSON.stringify(this.state.descriptions)} */}
                     </p>
                 </div>

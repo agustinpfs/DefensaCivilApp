@@ -165,140 +165,141 @@ export default class GeoRender extends Component {
                     <script src="script.js"></script>
 
                 </Helmet>
-<div>
-                {/* <Select
+                {/* <div style={{display: "inline-block"}}> */}
+                    {/* <Select
                     name="myselect"
                     options={options}
                     placeholder= "Elegir Tipo de Evento"
                 /> */}
-                <div id="map" className="clase"></div>
-
-<div className="inline">
-{/* BUSCAR POR ENTIDAD */}
-                {/* BUSCAR POR ENTIDAD */}
-                {/* BUSCAR POR ENTIDAD */}
-
-
-
-                <h3>Insertar en mapa por entidad:</h3>
-
-<form id="opciones" onSubmit={this.currentEntity}>
-    {/* SELECT THE USER */}
-    <div className="form-group">
-
-
-        <select
-            // id="convert"
-            className="form-control"
-            value={this.state.entitySelected}
-            onChange={this.onInputChange}
-            name="entitySelected"
-        >
-            {
-                this.state.entidadLista.map(nom => (
-                    <option >
-                        {nom.properties.nombre}
-                    </option>
-                ))
-            }
-        </select>
-    </div>
-    <input
-        id='ente'
-        className="form-control"
-        // value={JSON.stringify(this.state.currententity)}
-        // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
-        value={JSON.stringify(this.state.currententity)}
-
-        type="text"
-        style={{ display: "none" }}
-        
-    />
+                <div style={{display: "inline-block"}}>
+                    <div id="map" className="clase"></div>
+                    </div>
+                    <div style={{display: "inline-block"}}>
+                        {/* BUSCAR POR ENTIDAD */}
+                        {/* BUSCAR POR ENTIDAD */}
+                        {/* BUSCAR POR ENTIDAD */}
 
 
 
+                        <h3>Insertar en mapa por entidad:</h3>
+
+                        <form id="opciones" onSubmit={this.currentEntity}>
+                            {/* SELECT THE USER */}
+                            <div className="form-group">
 
 
-    {/* <button type='submit'>
+                                <select
+                                    // id="convert"
+                                    className="form-control"
+                                    value={this.state.entitySelected}
+                                    onChange={this.onInputChange}
+                                    name="entitySelected"
+                                >
+                                    {
+                                        this.state.entidadLista.map(nom => (
+                                            <option >
+                                                {nom.properties.nombre}
+                                            </option>
+                                        ))
+                                    }
+                                </select>
+                            </div>
+                            <input
+                                id='ente'
+                                className="form-control"
+                                // value={JSON.stringify(this.state.currententity)}
+                                // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                                value={JSON.stringify(this.state.currententity)}
+
+                                type="text"
+                                style={{ display: "none" }}
+
+                            />
+
+
+
+
+
+                            {/* <button type='submit'>
         submit
     </button> */}
-    {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
-    {/* <button id="convertire" >
+                            {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
+                            {/* <button id="convertire" >
         automático
     </button> */}
 
 
-<button id="convertire" type='submit' style={{ display: "none" }}>
-        show entidad elegida(oculto!)
+                            <button id="convertire" type='submit' style={{ display: "none" }}>
+                                show entidad elegida(oculto!)
     </button>
-    <button id="Xentidad" >Mostrar por entidad elegida</button>
-</form>
+                            <button id="Xentidad" >Mostrar por entidad elegida</button>
+                        </form>
 
-<br/>
-<br/>
+                        <br />
+                        <br />
 
 
-    {/* <button id="ir">show(gg)</button> */}
-    {/* <button type='submit'>
+                        {/* <button id="ir">show(gg)</button> */}
+                        {/* <button type='submit'>
             submit
     </button> */}
-    {/* <Link to={"/ListEvents"} id = 'convert'>
+                        {/* <Link to={"/ListEvents"} id = 'convert'>
         showEvento
                     </Link> */}
 
 
 
 
-{/* FIN BUSCAR POR ENTIDAD */}
-{/* FIN BUSCAR POR ENTIDAD */}
-{/* FIN BUSCAR POR ENTIDAD */}
+                        {/* FIN BUSCAR POR ENTIDAD */}
+                        {/* FIN BUSCAR POR ENTIDAD */}
+                        {/* FIN BUSCAR POR ENTIDAD */}
 
 
 
 
-<h5>Mostrar entidades en riesgo según evento:</h5>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        
-          <select value={this.state.value} onChange={this.handleChange}>
-                            <option value="elegir">ELEGIR TIPO DE EVENTO</option>
-                            <option value="incendio">Incendio</option>
-                            <option value="inundación">Inundación</option>
-                            <option value="accidente">Accidente</option>
-                            <option value="amenaza climática">Amenaza Climática</option>
-                        </select>
-                    </label>
+                        <h5>Mostrar entidades en riesgo según evento:</h5>
+                        <form onSubmit={this.handleSubmit}>
+                            <label>
 
-                    {/* <input id = "co" type="submit"/> */}
-                    <button id="convertirRiesgo" type='submit' style={{display:"none"}}>
-                            showEvento
-                    </button> 
-                    <button style={{marginLeft: "1em"}} id = "ir" >Mostrar entidades en Riesgo</button>
-                    {/* <button id="co" type='submit'>
+                                <select value={this.state.value} onChange={this.handleChange}>
+                                    <option value="elegir">ELEGIR TIPO DE EVENTO</option>
+                                    <option value="incendio">Incendio</option>
+                                    <option value="inundación">Inundación</option>
+                                    <option value="accidente">Accidente</option>
+                                    <option value="amenaza climática">Amenaza Climática</option>
+                                </select>
+                            </label>
+
+                            {/* <input id = "co" type="submit"/> */}
+                            <button id="convertirRiesgo" type='submit' style={{ display: "none" }}>
+                                showEvento
+                    </button>
+                            <button style={{ marginLeft: "1em" }} id="ir" >Mostrar entidades en Riesgo</button>
+                            {/* <button id="co" type='submit'>
                             showEvento
                     </button>
                     <button id="fer">gggggggggg</button> */}
-                    
 
-                </form>
 
-                <input
-                    // id='ente'
-                    id='enterisc'
-                    className="form-control"
-                    // value={JSON.stringify(this.state.currententity)}
-                    // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
-                    // value={JSON.stringify(this.state.currententity)}
-                    value={JSON.stringify(this.state.EntSegunRiesgo)}
-                    style={{display:"none"}}
-                    type="text"
-                />
-                {/* <button type='submit'>
+                        </form>
+
+                        <input
+                            // id='ente'
+                            id='enterisc'
+                            className="form-control"
+                            // value={JSON.stringify(this.state.currententity)}
+                            // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                            // value={JSON.stringify(this.state.currententity)}
+                            value={JSON.stringify(this.state.EntSegunRiesgo)}
+                            style={{ display: "none" }}
+                            type="text"
+                        />
+                        {/* <button type='submit'>
                     submit
                     </button> */}
-                {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
-                {/* <button id="convertire" > */}
-                {/* <button id="convertirRiesgo" >
+                        {/* {JSON.stringify(this.state.currententity)+ "aca"} */}
+                        {/* <button id="convertire" > */}
+                        {/* <button id="convertirRiesgo" >
                     sendToScript
                     </button> */}
 
@@ -307,57 +308,57 @@ export default class GeoRender extends Component {
 
 
 
-                
 
 
-<br/>
-<br/>
 
-                    <h5>Agregue una descripción del suceso:</h5>
+                        <br />
+                        <br />
 
-                <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
-                <div >
-                        <input
-                            // type="hidden"
-                            id="demo"
-                            style={{ display: "none" }}
+                        <h5>Agregue una descripción del suceso:</h5>
 
-                        />
-                    </div>
-                    <div className="">
-                        <textarea
-                            // type="text" 
-                            id="demo2"
-                            placeholder="Descripción"
-                            
-                        />
-                    </div>
-<br/>
-<br/>
-<br/>
-                    <button type='submit' id="convert"> {/*//lo mete en el form */}
-                        {/* <button id="convert"> */}
-                        Guardar todos los datos
+                        <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
+                            <div >
+                                <input
+                                    // type="hidden"
+                                    id="demo"
+                                    style={{ display: "none" }}
+
+                                />
+                            </div>
+                            <div className="">
+                                <textarea
+                                    // type="text" 
+                                    id="demo2"
+                                    placeholder="Descripción"
+
+                                />
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <button type='submit' id="convert"> {/*//lo mete en el form */}
+                                {/* <button id="convert"> */}
+                                Guardar todos los datos
                     </button>
-                </form>
-<br/>
-<br/>
-<br/>
-                <form onSubmit={this.onSubmit} > {/* update DB */}
-                    <button type="submit" className="btn btn-primary">
-                        Finalizar evento
+                        </form>
+                        <br />
+                        <br />
+                        <br />
+                        <form onSubmit={this.onSubmit} > {/* update DB */}
+                            <button type="submit" className="btn btn-primary">
+                                Finalizar evento
                     </button>
 
-                </form>
-
-               
+                        </form>
 
 
 
 
+
+
+                    </div>
                 </div>
-                </div>
-            </div>
+            // </div>
 
         )
 
