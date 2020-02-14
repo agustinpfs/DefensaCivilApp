@@ -6,7 +6,7 @@ const Geo = require('../models/Geo');
 
 
 geoCtrl.getGeo = async (req, res) => {
-  const geo = await Geo.find();
+  const geo = await Geo.find().sort({date:-1});
   res.json(geo);
 };
 

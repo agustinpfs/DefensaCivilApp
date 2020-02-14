@@ -44,7 +44,7 @@ export default class EventsGeo extends Component {
                 // descriptions: res.data.map(desc => desc.description),
                 descriptions: res.data,
                 descSelected: res.data[0].description,
-                // dateSelected: res.data[0].date
+                dateSelected: res.data[0].date
             })
         }
 
@@ -68,7 +68,8 @@ export default class EventsGeo extends Component {
         for (let i = 0; i < eventos.length; i++) {
             if (eventos[i].description === eventoDesc) {
                 this.setState({
-                    currentevent: eventos[i]
+                    currentevent: eventos[i],
+                    dateSelected: eventos[i].date,
                 });
             }
         }
@@ -119,10 +120,10 @@ export default class EventsGeo extends Component {
         console.log(this.state.descSelected)
     }
 
-    Date = (f) => {
-    var f = new Date();
-    return (f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-    }
+    // Date = (f) => {
+    // var f = new Date();
+    // return (f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+    // }
 
 
 
@@ -189,9 +190,11 @@ export default class EventsGeo extends Component {
                                 </select> */}
                                 {
                                     this.state.descriptions.map(desc => (
-                                        <option key={desc.id}>
+                        
+                                        <option className="option" key={desc.id}>
                                             {desc.description}
-                                            {/* {desc.description + this.Date()} */}
+                                            {/* {desc.description + this.state.dateSelected} */}
+                                            {/* {desc.description + ' ' + desc.date} */}
                                             
                                         </option>
                                     ))
@@ -222,6 +225,7 @@ export default class EventsGeo extends Component {
                     </form>
                     <div id="showDesc" style={{display: "none"}}> 
                     <h1 >  {this.state.descSelected}</h1>
+                    <h1 >  {this.state.dateSelected}</h1>
                     <button id="volverElegir" onClick = {this.buttonVolverElegir}>  Elegir otro evento</button>
                     </div>
                     <p>
