@@ -141,3 +141,56 @@ document.getElementById("convert").addEventListener("click",  function () {
     
     
     });
+
+
+
+    document.getElementById("ir").addEventListener("click",  function () {
+        function na() {
+            var evt = new Event('click');
+            var button = document.getElementById('convertirRiesgo');
+            // This is where the magic happens
+            button.dispatchEvent(evt);
+        }
+    
+        setTimeout (function name() {
+            var evt = new Event('click');
+            var button = document.getElementById('convertirRiesgo');
+            // This is where the magic happens
+            button.dispatchEvent(evt);
+        },300)
+    
+    
+    na()
+    name()
+        
+    })
+    
+    
+    
+    
+
+    document.getElementById("convertirRiesgo").addEventListener("click", function () {
+        const bbb = document.getElementById("enterisc")
+        console.log(bbb.value)
+        // console.log(ccc.value)
+    
+        const off = ' {"features":' + bbb.value + '}'
+        const seff = off.slice(1, -1);
+        console.log(seff);
+        function riesgos() {
+            const sendEntity = JSON.parse(off);
+            // const sendEntity = [{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 1","tipoEntidad":"Centro Salud","nro":"5909","direccion":"ALBERDI 2965","telefono":"0247742-1566","cp":"2700","email":"csantajuliaepb@yahoo.com.ar","sector":"Privada"},"geometry":{"type":"Point","coordinates":[-60.93317985534667,-34.57139056257011]},"type":"Feature","_id":"5e440516810592e2e79a9183"},{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 2","tipoEntidad":"Centro Salud","nro":"5802","direccion":"ITALIA 151","telefono":"0247742-4455","cp":"2700","email":"info@icade.edu.ar","sector":"Privada"},"geometry":{"type":"Point","coordinates":[-60.92845916748047,-34.58919867650491]},"type":"Feature","_id":"5e440516810592e2e79a9184"},{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 3","tipoEntidad":"Centro Salud","nro":"9000","direccion":"LAGOS 602","telefono":"0247741-4100","cp":"2700","email":"sanagustincolegio@hotmail.com","sector":"Privada"},"geometry":{"type":"Point","coordinates":[-60.95283508300781,-34.59414469764633]},"type":"Feature","_id":"5e440516810592e2e79a9185"},{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 4","tipoEntidad":"Centro Salud","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.96313476562499,-34.589551973494125]},"type":"Feature","_id":"5e440516810592e2e79a9186"},{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 5","tipoEntidad":"Centro Salud","nro":"1","direccion":"MERCED 618","telefono":"0247742-3742","cp":"2700","email":"eep1pergamino@yahoo.com.ar","sector":"Estatal"},"geometry":{"type":"Point","coordinates":[-60.96313476562499,-34.57782171051106]},"type":"Feature","_id":"5e440516810592e2e79a9187"},{"properties":{"riesgo":["accidente"],"nombre":"Centro Salud 6","tipoEntidad":"Centro Salud","nro":"48","direccion":"AV ANTONIO RIVERO S/N","telefono":"0247742-3704","cp":"2700","email":"claradisanto7@gmail.com","sector":"Estatal"},"geometry":{"type":"Point","coordinates":[-60.95163345336913,-34.58163776088898]},"type":"Feature","_id":"5e440516810592e2e79a9188"}]
+            // const sendEntity =  {"features":[{"properties":{"riesgo":["incendio"],"nombre":"PIO X","tipoEntidad":"educación","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.945625305175774,-34.58481766903432]},"type":"Feature","_id":"5e40cff566a45de09dc6d753","__v":0}]}
+            // const sendlista =  {"features":[{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543956,-33.58608959822979]},"type":"Feature","_id":"5e40ae6f6e61f9dfb3f619dd","__v":0},{"properties":{"riesgo":[],"nombre":"","tipoEntidad":"","direccion":"","telefono":"","email":"","sector":""},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e40ae986e61f9dfb3f619de","__v":0}]}
+            // const sendlista =  {"features": [{"properties":{"riesgo":["incendioo"],"nombre":"san pablo","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"03513044157","email":"agustinpfs@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95189094543456,-34.58608959822379]},"type":"Feature","_id":"5e4091beeb9430dc2be140db","__v":0},{"properties":{"riesgo":["incendioo"],"nombre":"PIO X","tipoEntidad":"edu","direccion":"castro barros 100","telefono":"035130441579999","email":"agustin@gmail.com","sector":"público"},"geometry":{"type":"Point","coordinates":[-60.95858573913574,-34.5946746110185]},"type":"Feature","_id":"5e4091eaeb9430dc2be140dc","__v":0}]}
+    
+            // console.log(sec)
+            // L.geoJson([sendlista]).addTo(map);
+            L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(mymap);
+    
+        }
+        riesgos()
+    
+    });
+    
+    

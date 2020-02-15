@@ -11,7 +11,8 @@ export default class EventsGeo extends Component {
         descSelected: '',
         dateSelected: '',
         descriptions: [],
-        currentevent: []
+        currentevent: [],
+        EntSegunRiesgo: []
     }
     // refreshPage = () => {
     //     location.reload();
@@ -44,7 +45,9 @@ export default class EventsGeo extends Component {
                 // descriptions: res.data.map(desc => desc.description),
                 descriptions: res.data,
                 descSelected: res.data[0].description,
-                dateSelected: res.data[0].date
+                dateSelected: res.data[0].date,
+                // EntSegunRiesgo: res.data[0].EntSegunRiesgo[0]
+
             })
         }
 
@@ -70,6 +73,8 @@ export default class EventsGeo extends Component {
                 this.setState({
                     currentevent: eventos[i],
                     dateSelected: eventos[i].date,
+                    EntSegunRiesgo: eventos[i].EntSegunRiesgo
+                    
                 });
             }
         }
@@ -141,6 +146,8 @@ export default class EventsGeo extends Component {
                         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
                         crossorigin=""></script>
                     <script src="eventScript.js"></script>
+                    {/* <script src="script.js"></script> */}
+
 
                 </Helmet>
                         <h4>Buscar evento por descripción</h4>
@@ -234,6 +241,29 @@ export default class EventsGeo extends Component {
                         {/* {JSON.stringify(this.state.descriptions)} */}
                     </p>
                 </div>
+                <button id="convertirRiesgo" type='submit' style={{ display: "none" }}>
+                            showEvento
+                    </button>
+                        <button style={{ marginLeft: "1em" }} id="ir" >Mostrar entidades en Riesgo</button>
+                        {/* <button id="co" type='submit'>
+                            showEvento
+                    </button>
+                    <button id="fer">gggggggggg</button> */}
+
+
+
+                    <input
+                        // id='ente'
+                        id='enterisc'
+                        className="form-control"
+                        // value={JSON.stringify(this.state.currententity)}
+                        // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
+                        // value={JSON.stringify(this.state.currententity)}
+                        value={JSON.stringify(this.state.EntSegunRiesgo)}
+                        style={{ display: "none" }}
+                        type="text"
+                    />
+{JSON.stringify(this.state.EntSegunRiesgo) +'yyy'}
             </div >
         )
     }
