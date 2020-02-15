@@ -9,11 +9,13 @@ export default class LoadData extends Component {
         nombre: '',
         telefono: '',
         email: '',
-        sector: '',
+        sector: [],
         direccion: '',
         riesgo: [],
         lat: '',
         lon: '',
+        // value: [],
+
         // coord: [] 
     }
 
@@ -55,124 +57,144 @@ export default class LoadData extends Component {
         })
     }
 
+    handleChange = (event) => {
+        this.setState({
+            tipoEntidad: event.target.value,
+            sector: event.target.value,
+
+        });
+    }
+
+    handleChange2 = (event) => {
+        this.setState({
+            sector: event.target.value,
+
+        });
+    }
+
+    handleChange3 = (event) => {
+        this.setState({
+            riesgo: event.target.value,
+
+        });
+    }
+
     render() {
         return (
             <div>
-                    <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                            <input
+                        <select className="form-control" value={this.state.tipoEntidad} onChange={this.handleChange}>
+                            <option value="elegir">Tipo Entidad</option>
+                            <option value="Educación">Educación</option>
+                            <option value="Centro Salud">Centro Salud</option>
+                            <option value="Organismo Público">Organismo Público</option>
+                            <option value="Depósito Combustible">Depósito Combustible</option>
+                            <option value="Lugar evento masivo">Lugar evento masivo</option>
+                            <option value="Club">Club</option>
+                            <option value="Hogar Acogida">Hogar Acogida</option>
+                        </select>
+                        {/* <input
                                 type="text"
                                 className="form-control"
                                 placeholder="Tipo Entidad"
                                 onChange={this.onInputChange}
                                 name="tipoEntidad"
                                 defaultValue={this.state.tipoEntidad}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Nombre"
-                                onChange={this.onInputChange}
-                                name="nombre"
-                                defaultValue={this.state.nombre}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Telefono"
-                                onChange={this.onInputChange}
-                                name="telefono"
-                                defaultValue={this.state.telefono}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="email"
-                                onChange={this.onInputChange}
-                                name="email"
-                                defaultValue={this.state.email}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Sector"
-                                onChange={this.onInputChange}
-                                name="sector"
-                                defaultValue={this.state.sector}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Direccion"
-                                onChange={this.onInputChange}
-                                name="direccion"
-                                defaultValue={this.state.direccion}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Riesgo"
-                                onChange={this.onInputChange}
-                                name="riesgo"
-                                defaultValue={this.state.riesgo}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Coordenadas"
-                                onChange={this.onInputChange}
-                                name="coord"
-                                defaultValue={this.state.coord}
-                                // defaultValue={JSON.stringify(this.state.coord)}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Latitud"
-                                onChange={this.onInputChange}
-                                name="lat"
-                                defaultValue={this.state.lat}
-                                // defaultValue={JSON.stringify(this.state.coord)}
-                                     />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Longitud"
-                                onChange={this.onInputChange}
-                                name="lon"
-                                defaultValue={this.state.lon}
-                                // defaultValue={JSON.stringify(this.state.coord)}
-                                     />
-                        </div>
-
-                        <button type="submir">SAVE</button>
-
-                    </form>
-<div className="">
-                    {this.state.tipoEntidad}
-                    {/* {this.state.coord} */}
-                    {this.state.lat}
-                    {this.state.lon}
-                    
+                                     /> */}
                     </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Nombre"
+                            onChange={this.onInputChange}
+                            name="nombre"
+                            defaultValue={this.state.nombre}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Telefono"
+                            onChange={this.onInputChange}
+                            name="telefono"
+                            defaultValue={this.state.telefono}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="email"
+                            onChange={this.onInputChange}
+                            name="email"
+                            defaultValue={this.state.email}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <select
+                            className="form-control"
+                            value={this.state.sector}
+                            onChange={this.handleChange2}
+                        >
+
+                            <option value="elegir">Sector</option>
+                            <option value="Público">Público</option>
+                            <option value="Privado">Privado</option>
+
+                        </select>
+                    </div>
+
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Direccion"
+                            onChange={this.onInputChange}
+                            name="direccion"
+                            defaultValue={this.state.direccion}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <select className="form-control" value={this.state.riesgo} onChange={this.handleChange3}>
+                            <option value="elegir">Tipo Riesgo</option>
+
+                            <option value="Incendio">Incendio</option>
+                            <option value="Inundación">Inundación</option>
+                            <option value="Amenaza Climática">Amenaza Climática</option>
+                            <option value="Accidente">Accidente</option>
+                        </select>
+                    </div>
+
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Latitud"
+                            onChange={this.onInputChange}
+                            name="lat"
+                            defaultValue={this.state.lat}
+                        // defaultValue={JSON.stringify(this.state.coord)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Longitud"
+                            onChange={this.onInputChange}
+                            name="lon"
+                            defaultValue={this.state.lon}
+                        // defaultValue={JSON.stringify(this.state.coord)}
+                        />
+                    </div>
+
+                    <button type="submir">SAVE</button>
+
+                </form>
+               
             </div>
         )
     }
