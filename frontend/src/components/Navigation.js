@@ -1,8 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
-export default class Navigation extends Component {
+
+class Navigation extends Component {
     render() {
+            if (this.props.location.pathname === '/consultorevents') {
+              return null
+            }
+
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
@@ -35,3 +41,6 @@ export default class Navigation extends Component {
         )
     }
 }
+
+
+export default withRouter(Navigation);
