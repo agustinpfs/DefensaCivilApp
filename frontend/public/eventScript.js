@@ -109,10 +109,17 @@ var butto = document.getElementById('convert');
 butto.dispatchEvent(ev);
 }, 300)
 
+setTimeout (function name2() {
+var eva = new Event('click');
+var butt = document.getElementById('convertirRiesgo');
+// This is where the magic happens
+butt.dispatchEvent(eva);
+}, 300)
 
 
 na()
 name()
+name2()
     
 })
 
