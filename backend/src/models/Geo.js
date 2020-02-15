@@ -6,6 +6,7 @@ const geoSchema = new Schema({
   type: { $type: String },  
   // date: { type: Date, default: Date.now },
   date: { $type: String },  
+  EntSegunRiesgo: [],
 
   // Array of subdocuments
   features: [{

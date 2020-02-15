@@ -133,7 +133,9 @@ export default class GeoRender extends Component {
         await axios.post('http://localhost:4000/api/geo', {
             all: this.state.all,
             description: this.state.description,
+            EntSegunRiesgo: this.state.EntSegunRiesgo,
             date: lafecha.toString()
+
 
         });
     }
