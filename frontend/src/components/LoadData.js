@@ -47,7 +47,17 @@ export default class LoadData extends Component {
             lat: this.state.lat,
             lon: this.state.lon,
         });
-        // this.setState({ username: '' });
+        this.setState({ 
+            nombre: '',
+            tipoEntidad: '',
+            telefono: '',
+            email: '',
+            sector: '',
+            direccion:'',
+            riesgo:'',
+            lat:'',
+            lon:''
+        });
         // this.getEntity();
     }
 
@@ -60,7 +70,7 @@ export default class LoadData extends Component {
     handleChange = (event) => {
         this.setState({
             tipoEntidad: event.target.value,
-            sector: event.target.value,
+            // sector: event.target.value,
 
         });
     }
@@ -110,7 +120,8 @@ export default class LoadData extends Component {
                             placeholder="Nombre"
                             onChange={this.onInputChange}
                             name="nombre"
-                            defaultValue={this.state.nombre}
+                            // defaultValue={this.state.nombre}
+                            defaultValue=''
                         />
                     </div>
                     <div className="form-group">

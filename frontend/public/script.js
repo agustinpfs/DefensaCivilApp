@@ -51,6 +51,34 @@ function onEachFeature(feature, layer) {
     if (feature.properties.nombre) {
         layer.bindPopup('<b>' + "COLEGIO " + '</b>' + feature.properties.nombre + '<br>' + '<b>' + "DIRECCIÓN " + '</b>' + feature.properties.direccion);
     }
+
+   
+        // var greenIcon = new L.Icon({
+            // iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+           
+        //   });
+
+        //   var LeafIcon = L.Icon.extend({
+        //     options: {
+        //         shadowUrl: 'leaf-shadow.png',
+        //         iconSize:     [38, 95],
+        //         shadowSize:   [50, 64],
+        //         iconAnchor:   [22, 94],
+        //         shadowAnchor: [4, 62],
+        //         popupAnchor:  [-3, -76]
+        //     }
+        // });
+        
+        //   L.marker([-34.57139056257011-60.93317985534667], {icon: greenIcon}).addTo(map);
+
+
+
+        //   <img src="https://unpkg.com/leaflet@0.7.7/dist/images/marker-icon.png" 
+        //   class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" 
+        //   tabindex="0" 
+        //   style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(472px, 143px, 0px); z-index: 143;"></img>
+    
 }
 
 // muestra todas las entidades
@@ -102,6 +130,9 @@ document.getElementById("convert").addEventListener("click", function () {
 //     name()
 
 // })
+
+
+
 
 
 document.getElementById("ir").addEventListener("click",  function () {
@@ -189,6 +220,9 @@ document.getElementById("convertirRiesgo").addEventListener("click", function ()
         // console.log(sec)
         // L.geoJson([sendlista]).addTo(map);
         L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(map);
+        
+     
+        L.Icon.Default.imagePath = ' ';
 
     }
     riesgos()

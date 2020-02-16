@@ -318,7 +318,11 @@ export default class GeoRender extends Component {
                         <button id="convertirRiesgo" type='submit' style={{ display: "none" }}>
                             showEvento
                     </button>
-                        <button style={{ marginLeft: "1em" }} id="ir" >Mostrar entidades en Riesgo</button>
+                        <button 
+                            style={{ marginLeft: "1em", background: "red", color: 'white' }} 
+                            id="ir" >
+                               <b> Mostrar entidades en Riesgo</b>
+                            </button>
                         {/* <button id="co" type='submit'>
                             showEvento
                     </button>
@@ -377,6 +381,8 @@ export default class GeoRender extends Component {
 
                             />
                         </div>
+                        <br/>
+                        <h5> Agregar fecha:</h5>
                         <div>
                             <input type="date" id="demo3" />
 

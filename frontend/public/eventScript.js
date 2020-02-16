@@ -193,6 +193,7 @@ document.getElementById("convert").addEventListener("click",  function () {
     
             // console.log(sec)
             // L.geoJson([sendlista]).addTo(map);
+            L.Icon.Default.imagePath = ' '
             L.geoJson([sendEntity], { onEachFeature: onEachFeature }).addTo(mymap);
     
         }
