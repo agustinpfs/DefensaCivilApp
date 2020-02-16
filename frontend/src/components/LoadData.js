@@ -202,7 +202,7 @@ export default class LoadData extends Component {
                         />
                     </div>
 
-                    <button type="submir">SAVE</button>
+                    <button type="submir">GUARDAR</button>
 
                 </form>
                

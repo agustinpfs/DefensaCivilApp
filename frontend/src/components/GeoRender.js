@@ -223,7 +223,7 @@ export default class GeoRender extends Component {
                     <h5>Marcar punto o demarcar zona</h5>
                     <div id="map" className="clase"></div>
                 </div>
-                <div style={{ display: "inline-block" }}>
+                <div className="cl" style={{ display: "inline-block" }}>
                     {/* BUSCAR POR ENTIDAD */}
                     {/* BUSCAR POR ENTIDAD */}
                     {/* BUSCAR POR ENTIDAD */}
@@ -364,7 +364,6 @@ export default class GeoRender extends Component {
 
 
                     <br />
-                    <br />
 
 
                     <h5>Agregue un título del suceso:</h5>
@@ -384,12 +383,15 @@ export default class GeoRender extends Component {
                                 placeholder="Título"
                                 />
                         </div>
+                        <br/>
                                 <h5>Agregue una descripción del suceso:</h5>
                         <div className="">
                             <textarea
                                 // type="text" 
                                 id="demo2"
                                 placeholder="Descripción"
+                                style={{ width: "350px" }}
+
 
                             />
                         </div>
@@ -401,13 +403,11 @@ export default class GeoRender extends Component {
                         </div>
                         <br />
                         <br />
-                        <br />
                         <button type='submit' id="convert"> {/*//lo mete en el form */}
                             {/* <button id="convert"> */}
                             Guardar todos los datos
                     </button>
                     </form>
-                    <br />
                     <br />
                     <br />
                     <form onSubmit={this.onSubmit} > {/* update DB */}

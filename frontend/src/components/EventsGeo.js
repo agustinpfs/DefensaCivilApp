@@ -161,7 +161,7 @@ export default class EventsGeo extends Component {
                 {/* <div id="mapa" style={{width: "0 px"}}> */}
                 {/* <div id="mapid" className="clase" style={{position:"relative", width: "0px", height: '0px'}}> */}
                 <div style={{ display: "inline-block",verticalAlign:'top' }}>
-                    <h4>Buscar evento por descripción</h4>
+                    <h4>Buscar evento por título</h4>
                     <div id="mapid" className="clase"></div>
                 </div>
 
