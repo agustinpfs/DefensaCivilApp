@@ -381,6 +381,8 @@ export default class GeoRender extends Component {
                                 type="text"
                                 id="demo4"
                                 placeholder="Título"
+                                style={{ width: "350px" }}
+
                                 />
                         </div>
                         <br/>
