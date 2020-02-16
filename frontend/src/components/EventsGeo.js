@@ -204,8 +204,7 @@ export default class EventsGeo extends Component {
                         showEvento(oculto)
                     </button>
 
-                    <button id="fer">Mostrar Evento</button>
-                  
+                    <button id="fer" style={{ background: "#00ACE4", color:"white" }}> <b>Mostrar Evento </b> </button>
                 </form>
                 <div id="showDesc" style={{ display: "none"}}>
                     <h1 >  {this.state.dateSelected}</h1>

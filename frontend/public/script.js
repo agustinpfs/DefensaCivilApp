@@ -8,7 +8,7 @@ const osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 map = L.map('map', {
     layers: [osm],
     center: [-34.58828009730246, -60.94828605651855],
-    zoom: 15
+    zoom: 14
 });
 const drawnItems = L.geoJson().addTo(map);
 map.addControl(new L.Control.Draw({
@@ -49,7 +49,7 @@ map.on('click', onMapClick);
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties.nombre) {
-        layer.bindPopup('<b>' + "COLEGIO " + '</b>' + feature.properties.nombre + '<br>' + '<b>' + "DIRECCIÓN " + '</b>' + feature.properties.direccion);
+        layer.bindPopup('<b>' + "Entidad " + '</b>' + feature.properties.nombre + '<br>' + '<b>' + "DIRECCIÓN " + '</b>' + feature.properties.direccion + '<br>' + '<b>' + "TELÉFONO " + '</b>' + feature.properties.telefono);
     }
 
    

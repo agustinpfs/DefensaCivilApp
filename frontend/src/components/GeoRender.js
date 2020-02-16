@@ -280,7 +280,7 @@ export default class GeoRender extends Component {
                         <button id="convertire" type='submit' style={{ display: "none" }}>
                             show entidad elegida(oculto!)
     </button>
-                        <button id="Xentidad" >Mostrar por entidad elegida</button>
+                        <button style={{ background: "#00ACE4", color:"white" }} id="Xentidad" ><b>Mostrar por entidad elegida</b></button>
                     </form>
 
                     <br />

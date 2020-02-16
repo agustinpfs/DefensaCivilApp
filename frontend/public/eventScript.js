@@ -31,7 +31,9 @@ mymap.on('click', onMapClick);
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties.nombre) {
-        layer.bindPopup(feature.properties.nombre);
+        // layer.bindPopup(feature.properties.nombre);
+        layer.bindPopup('<b>' + "Entidad " + '</b>' + feature.properties.nombre + '<br>' + '<b>' + "DIRECCIÓN " + '</b>' + feature.properties.direccion + '<br>' + '<b>' + "TELÉFONO " + '</b>' + feature.properties.telefono);
+
     }
 }
 
