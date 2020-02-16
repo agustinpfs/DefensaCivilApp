@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 export default class GeoRender extends Component {
     state = {
         all: '',
+        title: '',
         description: '',
         entitySelected: '',
         riscSelected: '',
@@ -115,11 +116,13 @@ export default class GeoRender extends Component {
         const valor = document.getElementById('demo').value;
         const valor2 = document.getElementById('demo2').value;
         const valor3 = document.getElementById('demo3').value;
+        const valor4 = document.getElementById('demo4').value;
 
         this.setState({
             all: valor,
             description: valor2,
-            date: valor3
+            date: valor3,
+            title: valor4
         })
     }
 
@@ -133,6 +136,7 @@ export default class GeoRender extends Component {
         await axios.post('http://localhost:4000/api/geo', {
             all: this.state.all,
             description: this.state.description,
+            title: this.state.title,
             EntSegunRiesgo: this.state.EntSegunRiesgo,
             date: lafecha.toString()
 
@@ -362,17 +366,25 @@ export default class GeoRender extends Component {
                     <br />
                     <br />
 
-                    <h5>Agregue una descripción del suceso:</h5>
 
+                    <h5>Agregue un título del suceso:</h5>
                     <form onSubmit={this.getElementandSet} >{/*//lo manda al estado */}
                         <div >
                             <input
                                 // type="hidden"
                                 id="demo"
                                 style={{ display: "none" }}
-
-                            />
+                                
+                                />
                         </div>
+                        <div>
+                            <input 
+                                type="text"
+                                id="demo4"
+                                placeholder="Título"
+                                />
+                        </div>
+                                <h5>Agregue una descripción del suceso:</h5>
                         <div className="">
                             <textarea
                                 // type="text" 

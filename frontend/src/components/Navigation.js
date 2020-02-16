@@ -13,7 +13,8 @@ class Navigation extends Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link className="navbar-brand" to='/'>
-                        geo
+                    <img src="Defensa-Civil-logo.png" alt=""/>
+                        Defensa Civil - Centro de operaciones 
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -22,15 +23,15 @@ class Navigation extends Component {
                         <ul className="navbar-nav ml-auto">
 
                             <li className="nav-item">
-                                <Link className="nav-link" to="/geoevents">geoevents</Link>
+                                <Link className="nav-link" to="/geo">Home</Link>
 
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/geo">geo</Link>
+                                <Link className="nav-link" to="/geoevents">Archivo</Link>
 
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/loaddata">Cargar data</Link>
+                                <Link className="nav-link" to="/loaddata">Cargar datos</Link>
 
                             </li>
                         </ul>

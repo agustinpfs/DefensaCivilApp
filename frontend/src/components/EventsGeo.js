@@ -9,6 +9,7 @@ export default class EventsGeo extends Component {
     state = {
         eventosLista: [],
         descSelected: '',
+        titleSelected: '',
         dateSelected: '',
         descriptions: [],
         currentevent: [],
@@ -46,6 +47,7 @@ export default class EventsGeo extends Component {
                 descriptions: res.data,
                 descSelected: res.data[0].description,
                 dateSelected: res.data[0].date,
+                titleSelected: res.data[0].title,
                 // EntSegunRiesgo: res.data[0].EntSegunRiesgo[0]
 
             })
@@ -65,27 +67,28 @@ export default class EventsGeo extends Component {
 
 
         const eventos = this.state.descriptions
-        const eventoDesc = this.state.descSelected
+        const eventoTitl = this.state.titleSelected
         // const currev = this.state.currentevent
 
         for (let i = 0; i < eventos.length; i++) {
-            if (eventos[i].description === eventoDesc) {
+            if (eventos[i].title === eventoTitl) {
                 this.setState({
                     currentevent: eventos[i],
                     dateSelected: eventos[i].date,
+                    titleSelected: eventos[i].title,
                     EntSegunRiesgo: eventos[i].EntSegunRiesgo
-                    
+
                 });
             }
         }
-           function  showHide () {
-                document.getElementById("opciones").style.display = "none";
-                // document.getElementById("mapid").style.width = "400px";
-                // document.getElementById("mapid").style.height = "400px";
-                document.getElementById("showDesc").style.display = "block";
+        function showHide() {
+            document.getElementById("opciones").style.display = "none";
+            // document.getElementById("mapid").style.width = "400px";
+            // document.getElementById("mapid").style.height = "400px";
+            document.getElementById("showDesc").style.display = "block";
 
-           }
-              showHide()
+        }
+        showHide()
     }
     buttonVolverElegir = () => {
         // document.getElementById("opciones").style.display = "block";
@@ -117,7 +120,7 @@ export default class EventsGeo extends Component {
     onInputChange = (e) => {
         // e.onClick.target.value = this.currentEvent()
         this.setState({
-            descSelected: e.target.value   //input info - e.target.name->depending on the name use a data
+            titleSelected: e.target.value   //input info - e.target.name->depending on the name use a data
 
         })
         // const es = e.target.value
@@ -142,7 +145,7 @@ export default class EventsGeo extends Component {
                     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
                         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
                         crossorigin="" />
-                        
+
                     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
                         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
                         crossorigin=""></script>
@@ -151,121 +154,89 @@ export default class EventsGeo extends Component {
 
 
                 </Helmet>
-                        <h4>Buscar evento por descripción</h4>
-                <div className="row">
-                    {/* {<script src="eventScript.js"></script>} */}
-                    {/* {console.log(this.state.eventosLista)} */}
-                    {/* {console.log(testeo)} */}
-                    {/* <div id="mapa" style={{width: "0 px"}}> */}
-                    {/* <div id="mapid" className="clase" style={{position:"relative", width: "0px", height: '0px'}}> */}
-                    <div id="mapid" className="clase">
-                        {/* </div> */}
-                    </div>
-
-                    <div>
-                        {/* <button id="conv" >hhhhhhhhhh</button> */}
-                        {/* <button id="co" >vuelva a aparecer</button> */}
-                        {/* <button onClick={this.currentEvent}>curr</button> */}
-
-                        {/* <button onLoad={this.currentEvent}>curr</button> */}
-
-                    </div>
-                            <br/>
-                    <form id="opciones" onSubmit={this.onSubmit}>
-                        {/* SELECT THE USER */}
-                        <div className="form-group">
-
-
-                            <select
-                                // id="convert"
-                                className="form-control"
-                                value={this.state.descSelected}
-                                onChange={this.onInputChange}
-                                name="descSelected"
-                                // onClick= {this.currentEvent}
-                                // placeholder="Type or select a stock here..."
-                                // isDisabled={this.props.disabled}
-                                // onClick= {this.showHide}
-                                // required
-                                >
-                                {/* {
-                                    this.state.descriptions.map(desc => (
-                                        <option key={desc} value={desc}>
-                                        {desc}
-                                        </option>
-                                        ))
-                                    }
-                                </select> */}
-                                {
-                                    this.state.descriptions.map(desc => (
-                        
-                                        <option className="option" key={desc.id}>
-                                            {desc.description}
-                                            {/* {desc.description + this.state.dateSelected} */}
-                                            {/* {desc.description + ' ' + desc.date} */}
-                                            
-                                        </option>
-                                    ))
-                                }
-                            </select>
-                        </div>
-                        <br />
-                        <input
-                            id='events'
-                            className="form-control"
-                            value={JSON.stringify(this.state.currentevent)}
-                            type="text"
-                            style={{ display: "none" }}
-                        />
-                        <button id="convert" type='submit' style={{ display: "none" }}>
-                        
-
-                            showEvento(oculto)
-                    </button>
-                        <button id="fer">Mostrar Evento</button>
-                        {/* <p> {this.Date()} </p> */}
-                        {/* <button type='submit'>
-                            submit
-                    </button> */}
-                        {/* <Link to={"/ListEvents"} id = 'convert'>
-                        showEvento
-                                    </Link> */}
-                    </form>
-                    <div id="showDesc" style={{display: "none"}}> 
-                    <h1 >  {this.state.descSelected}</h1>
-                    <h1 >  {this.state.dateSelected}</h1>
-                    <button id="volverElegir" onClick = {this.buttonVolverElegir}>  Elegir otro evento</button>
-                    </div>
-                    <p>
-                        {/* {this.state.descSelected} */}
-                        {/* {JSON.stringify(this.state.currentevent) + "AAAAAAAAAA"} */}
-                        {/* {JSON.stringify(this.state.descriptions)} */}
-                    </p>
+                {/* <div className="row"> */}
+                {/* {<script src="eventScript.js"></script>} */}
+                {/* {console.log(this.state.eventosLista)} */}
+                {/* {console.log(testeo)} */}
+                {/* <div id="mapa" style={{width: "0 px"}}> */}
+                {/* <div id="mapid" className="clase" style={{position:"relative", width: "0px", height: '0px'}}> */}
+                <div style={{ display: "inline-block",verticalAlign:'top' }}>
+                    <h4>Buscar evento por descripción</h4>
+                    <div id="mapid" className="clase"></div>
                 </div>
-                <button id="convertirRiesgo" type='submit' style={{ display: "none" }}>
-                            showEvento
-                    </button>
-                        <button style={{ marginLeft: "1em" }} id="ir" >Mostrar entidades en Riesgo</button>
-                        {/* <button id="co" type='submit'>
-                            showEvento
-                    </button>
-                    <button id="fer">gggggggggg</button> */}
 
+                <div style={{ display: "inline-block" , width: '40%', verticalAlign:'top'}}>
+               
+                <br />
+                <form id="opciones" onSubmit={this.onSubmit}>
+                    {/* SELECT THE USER */}
+                    <div className="form-group">
+                        <select
+                            // id="convert"
+                            className="form-control"
+                            value={this.state.titleSelected}
+                            onChange={this.onInputChange}
+                            name="descSelected"
+                        >
+                           
+                            {
+                                this.state.descriptions.map(desc => (
 
+                                    <option className="option" key={desc.id}>
+                                        {desc.title}
+                                        {/* {desc.description + this.state.dateSelected} */}
+                                        {/* {desc.description + ' ' + desc.date} */}
 
+                                    </option>
+                                ))
+                            }
+                        </select>
+                    </div>
+                    <br />
                     <input
-                        // id='ente'
-                        id='enterisc'
+                        id='events'
                         className="form-control"
-                        // value={JSON.stringify(this.state.currententity)}
-                        // value={'{'+'"features":[' + JSON.stringify(this.state.currententity)+']}'}
-                        // value={JSON.stringify(this.state.currententity)}
-                        value={JSON.stringify(this.state.EntSegunRiesgo)}
-                        style={{ display: "none" }}
+                        value={JSON.stringify(this.state.currentevent)}
                         type="text"
+                        style={{ display: "none" }}
                     />
-{JSON.stringify(this.state.EntSegunRiesgo) +'yyy'}
-            </div >
+                    <button id="convert" type='submit' style={{ display: "none" }}>
+                        showEvento(oculto)
+                    </button>
+
+                    <button id="fer">Mostrar Evento</button>
+                  
+                </form>
+                <div id="showDesc" style={{ display: "none"}}>
+                    <h1 >  {this.state.dateSelected}</h1>
+                    <h1 >  {this.state.titleSelected}</h1>
+                    <h6>  {this.state.descSelected}</h6>
+                    <button id="volverElegir" onClick={this.buttonVolverElegir}>  Elegir otro evento</button>
+                </div>
+            
+            <button id="convertirRiesgo" type='submit' style={{ display: "none" }}>
+                showEvento
+                    </button>
+            <button style={{ marginLeft: "1em", display: "none" }} id="ir" >Mostrar entidades en Riesgo</button>
+
+
+
+        <input
+            // id='ente'
+            id='enterisc'
+            className="form-control"
+            value={JSON.stringify(this.state.EntSegunRiesgo)}
+            style={{ display: "none" }}
+            type="text"
+        />
+             </div >
+             </div >
+            //  gggg
         )
     }
 }
+
+
+
+
+
