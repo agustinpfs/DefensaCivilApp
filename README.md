@@ -19,4 +19,4 @@ Aplicación geoespacial de apoyo a la coordinación de recursos frente a una cat
 
 `npm run dev`
 
-#### conectar a mongoDB (editado) 
+#### conectar a mongoDB
