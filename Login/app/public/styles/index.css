@@ -1,0 +1,19 @@
+header {
+    height: 55px;
+    width: 100%;
+}
+
+form{
+    float: right;
+}
+
+input[type="submit"]{
+    float: right;
+}
+
+iframe{
+    width: 100vw;
+    height: 700px;
+    border-bottom:0;
+    border-left: 0;
+}

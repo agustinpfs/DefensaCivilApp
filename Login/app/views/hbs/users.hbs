@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Administracion de Usuarios</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Google Fonts y Font Awesome-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="/styles/users.css">
+</head>
+
+<body>
+    <header class="contenido-header" role="banner">
+      <div class="container-fluid">
+        <form action="/index" method="get">
+        <input type="submit" value="Menu Principal" id="menu-principal"class="btn btn-dark">
+      </form>
+          <h1 class="texto-header"> Administracion de Usuarios </h1>
+      </div>
+    </header>
+
+    <div class="contenido-principal container">
+        <main class="container" role="main">
+            <div id="tabla-usuarios">
+              <h2> Usuarios </h2>
+              <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th id="nombre" class="nombre" scope="col">Nombre</th>
+                    <th id="username" class="username" scope="col">Nombre de usuario</th>
+                    <th id="email" class="email" scope="col">E-mail</th>
+                    <th id="rol" class="rol" scope="col">Rol</th>
+                    <th>Editar <i class="far fa-edit"></i></th>
+                    <th>Eliminar <i class="fas fa-trash"></i></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                  {{#each users}}
+                    <td>{{name}}</td>
+                    <td>{{username}}</td>
+                    <td> {{email}}</td>
+                    <td>{{role}}</td>
+                    <td><a data-toggle="modal" data-target="#editar-usuario" class=" btn btn-warning" type="button">Editar</a></td>
+                    <td id="eliminar">
+                      <form action="/user/delete/username/{{username}}" method="post">
+                        <input type="submit" value="Eliminar" class=" btn nav-link btn-danger">
+                      </form>
+                    </td>
+                  </tr>
+                  {{/each}} 
+
+                </tbody>
+              </table>
+            </div>
+    
+            <!--Modal Agregar Usuario-->
+            <div class="modal fade" id="agregar-usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> <!--Modal Header-->
+
+                  <div class="modal-body">
+                    <form action="/user" class="formulario-usuario" method="POST">
+                      <fieldset>
+                        <legend>Datos de Usuario</legend>
+
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name" required>
+
+                        <label for="username">Nombre de usuario:</label>
+                        <input type="text" name="username" id="username" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" placeholder="correo@dominio.com" id="email" name="email" required>
+
+                        <label for="password">Contraseña:</label>
+                        <input type="password" placeholder="password" id="password" name="password" required>
+
+                        <label for="Rol">Rol:</label>
+                        <select name="role" id="role" required>
+                          <option value="" disabled selected>-- Seleccione --</option>
+                          <option value="admin">Admin</option>
+                          <option value="dataentry">Dataentry</option>
+                        </select>
+                      </fieldset>
+                      <button type="submit" id="guardar-usuario" class="btn btn-primary">Guardar</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </form>
+                  </div> <!--Modal Body-->
+                </div> <!--Modal Content-->
+              </div> <!--Modal Dialog-->
+            </div> <!--Modal Agregar Usuario-->
+
+        <!--Modal Editar usuario-->
+            <div class="modal fade" id="editar-usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> <!--Modal Header-->
+
+                  <div class="modal-body">
+                    <form action="/user/edit" class="formulario-usuario" method="POST">
+                      <fieldset>
+                        <legend>Datos de Usuario</legend>
+
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name">
+                        
+                        <label for="previous_username"> Actual nombre de usuario:</label>
+                        <input type="text" name="previous_username" id="username" required>
+
+                        <label for="username">Nuevo nombre de usuario:</label>
+                        <input type="text" name="username" id="username">
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" placeholder="correo@dominio.com" id="email" name="email">
+
+                        <label for="password">Contraseña:</label>
+                        <input type="password" placeholder="password" id="password" name="password">
+
+                        <label for="Rol">Rol:</label>
+                        <select name="role" id="role">
+                          <option value="" disabled selected>-- Seleccione --</option>
+                          <option value="admin">Admin</option>
+                          <option value="dataentry">Dataentry</option>
+                        </select>
+                      </fieldset>
+                      <button type="submit" id="guardar-usuario" class="btn btn-primary">Guardar</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </form>
+                  </div> <!--Modal Body-->
+                </div> <!--Modal Content-->
+              </div> <!--Modal Dialog-->
+            </div> <!--Modal Agregar Empleado-->
+        </main>
+  
+        <!--boton agregar usuario -->
+        <aside role="complementary">
+            <nav class="navbar" role="navegation">
+                <ul class="nav flex-column nav-justified">
+                    <li class="nav-item">
+                        <a data-toggle="modal" data-target="#agregar-usuario" class=" btn nav-link btn-dark" id="add-button" type="button">Agregar Usuario</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--jQuery-->
+    <script type="text/javascript" src="../../public/js/jquery-3.4.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--pagina de menu principal aca la cambiarian por la de ustedes con el mapa-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Menu Principal</title>
+</head>
+<body>
+    <header class="navbar navbar-dark bg-dark" style="display: block;">
+        <!--BOTON DE CERRAR SESION--> 
+        <form action="/logout" method="get">
+            <input type="submit" class="btn btn-dark" value="Cerrar Sesion">
+        </form>
+        <!--BOTON GESTION DE USUARIOS PARA SOLO EL ADMIN-->
+        {{#if admin}}   <!--si el usuario es admin pongo el boton-->
+        <form action="/user" method="get">
+            <input type="submit" class="btn btn-dark" value="Gestion de usuarios">
+        </form>
+        {{/if}} 
+    </header>
+    
+    <iframe src="http://localhost:3000/geo"></iframe>
+</body>
+</html>

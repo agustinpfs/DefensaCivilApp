@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/login.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="signIn">
+        <form action="/login" method="POST">
+            <h2>Iniciar Sesion</h2>
+            <input type="text" name="username" placeholder="Nombre de usuario">
+            <br><br>
+            <input type="password" name="password" placeholder="Contraseña">
+            <br><br>
+                <input type="submit" value="Iniciar sesion">
+        </form>
+        <br><br><br>
+        <p>No tienes cuenta?</p>
+        <form action="/consultor" method="get">
+            <input type="submit" class="btn btn-primary" value="Ingreso consultor">
+        </form>
+    </div>
+</body>
+</html>
+
+

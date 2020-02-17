@@ -1,0 +1,162 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../styles/img/background-user.jpg);
+    background-size: cover;
+}
+
+/*
+=============================================
+    HEADER
+=============================================
+*/
+.contenido-header {
+    height: 15rem;
+}
+
+h1.texto-header {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5rem;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px white;
+}
+
+.btn-secondary{
+    font-size: large;
+    color: white;
+}
+
+#menu-principal{
+    font-size: large;
+}
+
+/*
+=============================================
+    CONTENIDO CENTRAL
+=============================================
+*/
+
+.contenido-principal {
+    display: flex;
+    margin-top: 2rem;
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+main div {
+    flex-basis: 66.6%;
+}
+
+/*
+=============================================
+    TABLA USUARIOS
+=============================================
+*/
+
+
+table.table {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+thead.thead {
+    align-items: center center;
+}
+
+div#tabla-usuarios h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    font-size: x-large;
+}
+.btn-danger{
+    font-size: small;
+}
+
+.btn-warning{
+    font-size: small;
+    padding: .5rem 1rem;
+}
+
+button.boton-agregar {
+    float: right;
+}
+
+/*
+=============================================
+    AGREGAR Usuario
+=============================================
+*/
+
+form.formulario-usuario {
+    font-size: medium;
+}
+
+label {
+    display: block;
+}
+
+fieldset legend {
+    font-size: x-large;
+    font-weight: 800;    
+}
+
+input:not([type="submit"]), 
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+select {
+    --webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 2rem;
+}
+/*boton de cerrar en el modal*/
+button[type="button"]{
+    font-size: large;
+}
+/*boton de guardar en el modal*/
+button[type="submit"]{
+    font-size: large;
+}
+/*
+=============================================
+    MENU LATERAL
+=============================================
+*/
+
+.aside-menu {
+    list-style: none;
+    margin-top: 10px;
+}
+
+a.nav-link {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#add-button{
+    color: white;
+}
