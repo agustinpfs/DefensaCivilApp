@@ -54,7 +54,7 @@ export default class GeoRender extends Component {
         // const ffee = fe.toString()
 
         var dateControl = document.querySelector('input[type="date"]');
-        dateControl.value = '2020-02-17';
+        dateControl.value = '2020-04-21';
         this.getEntity();
     }
 

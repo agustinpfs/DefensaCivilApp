@@ -76,6 +76,7 @@ export default class EventsGeo extends Component {
                     currentevent: eventos[i],
                     dateSelected: eventos[i].date,
                     titleSelected: eventos[i].title,
+                    descSelected: eventos[i].description,
                     EntSegunRiesgo: eventos[i].EntSegunRiesgo
 
                 });
@@ -120,7 +121,8 @@ export default class EventsGeo extends Component {
     onInputChange = (e) => {
         // e.onClick.target.value = this.currentEvent()
         this.setState({
-            titleSelected: e.target.value   //input info - e.target.name->depending on the name use a data
+            titleSelected: e.target.value,   //input info - e.target.name->depending on the name use a data
+            descSelected: e.target.value  //input info - e.target.name->depending on the name use a data
 
         })
         // const es = e.target.value
@@ -151,8 +153,6 @@ export default class EventsGeo extends Component {
                         crossorigin=""></script>
                     <script src="eventScript.js"></script>
                     {/* <script src="script.js"></script> */}
-
-
                 </Helmet>
                 {/* <div className="row"> */}
                 {/* {<script src="eventScript.js"></script>} */}
